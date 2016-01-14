@@ -8,14 +8,12 @@ body {
 	 
 }
 .kop1 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 50px;
+	font-size: 40px;
 	text-align: center;
 	letter-spacing: 2px;
 
 }
 .kop2 {
-	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	padding-top: 20px;
 	letter-spacing: 1px;
@@ -42,8 +40,7 @@ body {
 	margin: 0px !important;
 	padding: 0px !important;
 	line-height: 100px;
-	letter-spacing: 5px;
-	z-index:3;
+	letter-spacing: 7px;
 }
 .titel {
 	color: black;
@@ -117,32 +114,6 @@ body {
 	line-height: 50px;
 
 }
-
-/*bronicoon*/
-.source_hover{ 
-	color:yellow;
-	display:inline;
-	cursor:pointer;
-	position:relative;
-	z-index:2;
-}
-
-/*blokje bron*/
-.source_hover:hover:after{ 
-	font-size:12px;
-	padding:5px;
-	background:yellow;
-	color:black;
-	position:absolute;
-	top:15px;
-	left:15px;
-	min-width:1000px;
-	content: attr(data-bron); /*tekst in html!!!*/
-
-}
-
-
-
 
 
 
