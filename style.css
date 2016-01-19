@@ -1,21 +1,30 @@
+::selection {
+  background: yellow; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: yellow; /* Gecko Browsers */
+}
+
 body {
+
 
 	 font-family: 'Playfair Display', serif; 
 	 font-size: 14px;
 	 letter-spacing: 0px;
 	 word-spacing: 0px;
 	 margin-bottom:1000px;
+	 background: black;
 	 
 }
 .kop1 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Playfair Display', serif;
 	font-size: 50px;
 	text-align: center;
 	letter-spacing: 2px;
 
 }
 .kop2 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Playfair Display', serif;
 	font-size: 16px;
 	padding-top: 20px;
 	letter-spacing: 1px;
@@ -33,12 +42,12 @@ body {
 	height:100px;
 	width: 100%;
 	text-align: center;
-	background: #FFF;
+	background: black;
 	font-size: 14px;
 	position: fixed;
 	bottom: 0px;
 	left: 0px;
-	color: black;
+	color: #333;
 	margin: 0px !important;
 	padding: 0px !important;
 	line-height: 100px;
@@ -46,7 +55,7 @@ body {
 	z-index:3;
 }
 .titel {
-	color: black;
+	color: #222;
 	line-height: 270px;
 }
 .titel-r1 {
@@ -68,7 +77,8 @@ body {
 .titel-tussenregel1 {
 	padding-left: 500px;
 	font-size: 350px;
-	color: white;
+	color: black;
+	visibility: hidden;
 }
 .titel-r5 {
 	padding-left: 50px;
@@ -86,7 +96,8 @@ body {
 .titel-tussenregel2 {
 	padding-left: 500px;
 	font-size: 350px;
-	color: white;
+	color: black;
+	visibility: hidden;
 
 }
 .titel-r8 {
@@ -98,8 +109,9 @@ body {
 .titel-tussenregel3 {
 	padding-left: 50px;
 	font-size: 10px;
-	color: white;
+	color: black;
 	line-height: 150px;
+	visibility: hidden;
 }
 .titel-r9 {
 	font-family: 'Playfair Display Bold 700', serif; 
