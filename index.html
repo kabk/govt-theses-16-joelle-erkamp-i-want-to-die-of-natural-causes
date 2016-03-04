@@ -8,10 +8,10 @@
 				
 				$(document).scroll(function() {
 					
-				  	var currentScroll = $(document).scrollTop() +300;
+				  	var currentScroll = $(document).scrollTop() +600;
 				  	window.tempTitle = $("h1:first-of-type").text();
 				  	
-				  	$("body").find(".kop,h1,h2,h3,h4,h5,h6").each(function() {
+				  	$("body").find(".kop1").each(function() {
 						var headingOffset = $(this).offset().top;
 						if(parseInt(headingOffset) < parseInt(currentScroll)) {
 							window.tempTitle = $(this).text();
@@ -22,31 +22,56 @@
 						$(".onderbalk").text(window.tempTitle);
 					}
 				});
+
+
+
+
+				$('a[href*="#"]:not([href="#"])').click(function() {
+					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) 
+					{
+						var target = $(this.hash);
+						target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+						if (target.length) {
+							$('html, body').animate({
+								scrollTop: target.offset().top
+							}, 1000);
+							return false;
+						}
+					}
+				});
 			});
 		</script>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
 		<title>This is the title of joelle thesis</title>
 
 		<meta name="title" content="I WANT TO DIE OF NATURAL CAUSES" />
 		<meta name="description" content="Thesis from fourth-year graphic design student at The Royal Academy of Art, KABK, The Hague." />
 
-	<meta property="og:title" content="I WANT TO DIE OF NATURAL CAUSES" />
-    <meta property="og:description" content="Hoe stellen grafisch ontwerpers en kunstenaars de verwoestende gevolgen van klimaatverandering aan de kaak?" />
-    <meta property="og:image" content="http://kabk.github.io/govt-theses-16-joelle-erkamp-i-want-to-die-of-natural-causes/images/olie.jpg"/>
-    <meta property="og:author" content="Joelle Erkamp" />
+		<meta property="og:title" content="I WANT TO DIE OF NATURAL CAUSES" />
+	    <meta property="og:description" content="Hoe stellen grafisch ontwerpers en kunstenaars de verwoestende gevolgen van klimaatverandering aan de kaak?" />
+	    <meta property="og:image" content="http://kabk.github.io/govt-theses-16-joelle-erkamp-i-want-to-die-of-natural-causes/images/olie.jpg"/>
+	    <meta property="og:author" content="Joelle Erkamp" />
 
-    <meta property="dc:creator" content="Joelle Erkamp" />
-    <meta property="dc:created" content="2015-12-05T00:00:00Z">
-    <meta property="dc:modified" content="2015-12-05T00:00:00Z">
+	    <meta property="dc:creator" content="Joelle Erkamp" />
+	    <meta property="dc:created" content="2015-12-05T00:00:00Z">
+	    <meta property="dc:modified" content="2015-12-05T00:00:00Z">
 
-    <meta property="twitter:site" content="@nrc">
+	    <meta property="twitter:site" content="@nrc">
 
+		<!-- bootstrap -->
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/bootstrap.min.js"></script>
+		
 
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+
+		
+
 
 	</head>
 
@@ -55,126 +80,1082 @@
 	<body>
 		<div class='onderbalk'>I'D RATHER DIE OF NATURAL CAUSES</div>
 		<div class='content'>
+<div class='row titel'>
+	<div class='col-sm-6 text-right'>
+		<b>I'D<br />RATHER<br />DIE<br /></b>
+	</div>
+	<div class='col-sm-6 text-left'>
+	</div>
+</div>
+<div class='row titel titelgeel'>
 
-		<div class='titel'>
-			<span class='kop' style='visibility:hidden;'>I'D RATHER DIE OF NATURAL CAUSES</span>
-			<div class='titel-r1'>
-				I'D
-			</div>
-			<div class='titel-r2'>
-				RATHER
-			</div>
-			<div class='titel-r3'>
-				DIE
-			</div>
-			<div class='titel-tussenregel1'>
-			 	.
-			</div>
-			<div class='titel-r5'>
-				OF
-			</div>
-			<div class='titel-r6'>
-				NATU
-			</div>
-			<div class='titel-r7'>
-				RAL
-			</div>
-			<div class='titel-tussenregel2'>
-			 	.
-			</div>
-			<div class='titel-r8'>
-				CAUSES
-			</div>
-			<div class='titel-tussenregel3'>
-			 	.
-			</div>
-			<div class='titel-r9'>
-				ROYAL ACADEMY OF ART, THE HAGUE
-			</div>
-			<div class='titel-r10'>
-				GRADUATION THESIS GRAPHIC DESIGN -  Jo&#235lle Erkamp
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
+	<div class='col-sm-6 text-right'>
+	</div>
+	<div class='col-sm-6 text-left'>
+		<b>OF<br />NATURAL<br />CAUSES</b>
+	</div>
+</div>
+			<br />
+			<br />
+
+<div class='row'>
+	<div class='col-sm-6 text-right'>
+	</div>
+	<div class='col-sm-6 text-left titelnaam'>
+		<br />
+		<b>Royal Academy of Art, The Hague <br/>
+		Graduation Thesis Graphic Design - Jo&#235lle Erkamp</b>
+		<br />
+		<br />
+		<br />
+		<br />
+		
+
+
+	</div>
+</div>
+
+		
+<div class='row'>
+	<div class='col-sm-6 text-right'>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+
+		<div class='titel titel-r99'><b>In what manner is graphic design used to expose the devastating effects of global warming?</b></div>
+
+		<br />
+		<br />
+
+		| <a href='#proloog'>Proloog</a> | <a href='#inleiding'>Inleiding</a> | <a href='#beknopte-lessen'>Beknopte lessen uit de klimaatwetenschap</a> | 
+		<a href='#recente-ontwikkelingen'>Recente ontwikkelingen</a> |
+		<a href='#eco-coin-meat-the-future'>Eco Coin / Meat The Future</a> |
+		<a href='#little-book-of-shocking-eco-facts'>The Little Book of Shocking Eco Facts</a> |
+		<a href='#at-this-rate'>At This Rate</a> |
+		<a href='#save-our-children'>Save Our Children</a> |
+		<a href='#conclusie'>Conclusie</a> |
+		<a href='#abstract'>Abstract</a> |
+	</div>
+
+	<div class='col-sm-6 text-left'>
+	</div>
+</div>			<br />
+		<br /><br />
+		<br /><br />
+		<br />
 				<br>
 				<br>
 				<br>	
 			</div>
 		</div>
-			<div class='tekstvak proloog'>
-				<div class='kop kop1'>PROLOOG</div>
-				<p>Ziektes, plagen, hittegolven, droogtes, overstromingen, orkanen, zware schade aan ecosystemen en bedreiging van de voedselproductie: de gevolgen van de opwarming van de aarde zijn nu al merkbaar en ze zullen in de toekomst ernstiger worden en mogelijk zelfs catastrofaal. <span data-bron='Gore, A (2006) An Inconvenient Truth: The Planetary Emergency of Global Warming and What We Can Do about It' class='source_hover'><i class="fa fa-sun-o"></i></span>
-				</p>
-			</div>
+			
+			<div class='row'>
+
+				<div class='col-sm-6'>
+					<div class='tekstvak proloog'>
+						<a id='proloog'></a>
+			
+						<div class='kop kop1'><b> <u>&nbsp;&nbsp;&nbsp;&nbsp;Proloog</u></b></div>
+						<br />
+						<br />
+						<p>Ziektes, plagen, hittegolven, droogtes, overstromingen, orkanen, zware schade aan ecosystemen en bedreiging van de voedselproductie: de gevolgen van de opwarming van de aarde zijn nu al merkbaar. In de toekomst zullen ze ernstiger worden en mogelijk zelfs catastrofaal.<span data-bron='Gore, A (2006) An Inconvenient Truth: The Planetary Emergency of Global Warming and What We Can Do about It' class='source_hover'><i class="fa fa-sun-o"></i></span>
+						</p>
+					</div>				
+				</div>
+
+				<div class='col-sm-6 klein-font'>
+					
+				</div>
+				
+			</div> <!-- einde row -->
+
+			<div class='row'>
+
+				<div class='col-sm-6'>
+
+
 
 			<div class='tekstvak inleiding'>
-				<div class='kop kop1'>INLEIDING</div>
-				<p>Vier jaar geleden deed ik toelating voor de kunstacademie. Ik wist precies waarom. Zo veel mogelijk mensen moest ik zo snel mogelijk aan het verstand brengen dat het eten van plofkip en kiloknallers immoreel en walgelijk is. Ook had ik een algemeen doel dat veelzijdiger was: inhoudelijk sterk werk maken. Op de afdeling ‘Graphic Design’ van de Koninklijke Academie van Beeldende Kunsten zou ik leren om uitingen te ontwerpen die een bijdrage leveren aan het oplossen van maatschappelijke kwesties voor een betere wereld. Ik wilde mijn mening en ideeën propageren en mezelf daarin, met hulp van de academie, ontwikkelen. Ik wilde leren hoe je als grafisch ontwerper (grote) maatschappelijke problemen aan de kaak stelt. Ik wilde uitvinden hoe je door middel van artistieke uitingen mensen op een intelligente maar heldere manier kunt aanspreken op hun gedrag. Een strijd voeren tegen desinteresse, onwetendheid en onverschilligheid.</p>
+				<a id='inleiding'></a>
+			
+				<div class='kop kop1'><b><u>&nbsp;&nbsp;&nbsp;&nbsp;Inleiding</u></b></div>
+				<br />
+				<br />
+				<p>Vier jaar geleden deed ik toelating voor de kunstacademie. Ik wist precies waarom. Zo veel mogelijk mensen moest ik spoedig aan het verstand brengen dat het eten van plofkip en kiloknallers immoreel en walgelijk is. Ook had ik een algemeen doel dat veelzijdiger was: inhoudelijk, geëngageerd sterk werk maken. Op de afdeling ‘Graphic Design’ van de Koninklijke Academie van Beeldende Kunsten zou ik leren om projecten te maken die een bijdrage leveren aan het oplossen van maatschappelijke problematiek. Ik zou uitvinden hoe je door middel van artistieke uitingen mensen op een intelligente maar heldere manier kunt aanspreken op hun gedrag. Een strijd voeren tegen desinteresse, onwetendheid en onverschilligheid. </p>
+
 				<p>Stiekem verwachtte ik op de academie zielsverwanten te vinden. Sterker nog, ik verheugde me erop. De geitenwollensokkenbrigade. Een groep creatieve en alternatieve figuren, die - eventueel onder het genot van aanzienlijke hoeveelheden hasj - wereldproblematiek en hun eigen positie daarin bespraken. Een groep wereldverbeteraars, bevlogen idealisten, die misstanden aan de kaak stellen door middel van kunst. Mocht te zijner tijd blijken dat deze ingebeelde groep afwezig is, dan zouden er hoe dan ook in groten getale ‘geëngageerde types’ rondlopen. Daar was ik van overtuigd.</p>
-				<p>Er was geen geitenwol te bekennen. Ook geen hasj. Wel opvallend veel modern geklede giechelende meisjes. We kregen les in een keurig geordend, smetteloos lokaal dat me deed denken aan een soort kruising tussen een grote lege loft en een aquarium. Het was heel bijzonder. </p>
-				<p>Mijn medestudenten bleken heel normale, sympathieke en bij gelegenheid gepassioneerde mensen te zijn, maar zeker geen wereldverbeteraars. Dat had ik al vrij snel door. Ik was immers de enige vegetariër in de klas. Jammer en zo nu en dan frustrerend, maar realiteit.</p> 
-				<p>Tot mijn genoegen werden er in de loop van mijn studiejaren wel steeds vaker opdrachten gegeven met een sociaal-maatschappelijk en/of politiek karakter. Vaak werd er dan door mijn klasgenoten geprotesteerd tegen dit ‘soort’ opdrachten, omdat ze je ‘in een bepaalde richting’ probeerden te duwen. Dit werd als moeilijk of als een belemmering van vrijheid ervaren. Vanzelfsprekend was ik het hier meestal mee oneens. Ik snapte de bezwaren. Maar zelf streef ik naar maatschappelijke relevantie en nut in mijn werk en ik zie dat ook graag bij anderen. Over het algemeen deins ik terug voor vage verhalen die uitsluitend voor het individu die het bedacht heeft interessant zijn, tenzij het een goede discussie aanwakkert natuurlijk.</p>  
-				<p>Maargoed, het is spijtig. Op de academie lopen weinig graphic design studenten rond met een (voor mij) inspirerende mentaliteit. Waarom is dat? Is mijn generatie, de individualisten, een passieve of onverschillige? Het protest van mijn leeftijdsgenoten beperkt zich voornamelijk tot het tot vlag transformeren van een profielfoto op Facebook. Hoe komt dat toch? Hoe zit het met onze morele plichten? Waarom ben ik de enige met een scriptie over klimaatverandering? Meer dan ooit zijn er grafisch ontwerpers, boodschappers, nodig die uiting geven aan urgente kwesties als deze. Waar buiten de academie zijn deze ontwerpers? Wat doen ze zoal? Waar zijn ze goed in? Hoe leveren zij een bijdrage aan een betere wereld?</p> 
 
-<div class='kop kop2'><span class='hidden'>INLEIDING - </span> Een goed onderwerp voor mijn scriptie</div>
-				<p>Op de vraag ‘waarom’ het juist voor een grafisch ontwerper nuttig is om maatschappelijke problemen aan de kaak te stellen, weet ik het antwoord wel. Waar ik geïnteresseerd in ben, is het antwoord op de vraag ‘hoe’ ik dat het best kan doen. Om op deze vraag een goed en specifiek antwoord te krijgen, ga ik mij richten op één urgent onderwerp. Een onderwerp dat wat mij betreft globaal de meest urgente van onze tijd is. </p> 
-				<p>Al jaren ben ik een fanatiek en enthousiast vegetariër. Toen ik het boek Eating Animals van Jonathan Safran Foer las, en er zo achter kwam welke gruwelijkheden zich afspelen in de bio-industrie en wat de impact van de vleesindustrie op ons milieu is, twijfelde ik geen seconde. Ik werd direct vegetariër. Het kostte me werkelijk geen enkele moeite. Hoe meer ik mij ging verdiepen in de beweegredenen voor vegetarisme, hoe vaker ik mij af vroeg waarom ik niet veel eerder dit besluit had genomen. In het begin van mijn anti-vlees avontuur dacht ik regelmatig: ‘Als mensen weten wat ik weet, krijgen ze geen gehaktbal meer door hun keel.’ Al snel bleek dit een illusie. Tot de dag van vandaag vraag ik mij af waar dat aan ligt. Ben ik niet overtuigend genoeg? Is mijn verhaal niet plausibel? Kan het mensen echt niets schelen dat we dieren uitbuiten, martelen en onze planeet ruïneren? Dit onderwerp staat dicht bij mij. Het raakt mij diep en tegelijkertijd fascineert het mij mateloos. Het zou voor mijn scriptie en afstudeerproject een prima keuze zijn om mij te richten op (artistieke) acties tegen de vleesindustrie.</p>  
-				<p>Maar in mei dit jaar gebeurde er iets - en het kwam uit onverwachte hoek - waarvan ik overtuigd was dat het alles zou veranderen. Mijn vriend noemde het ‘een keerpunt in politiek, ondernemerschap en publieke opinie.’ En ik ‘een keiharde ontkrachting van alle stupide tegenargumenten die ik heb moeten aanhoren afgelopen jaren.’ Het Internationaal Monetair Fonds (IMF) - een VN-organisatie die haar 188 lidstaten adviseert over het voeren van financieel beleid - publiceerde een rapport waarin ze concludeerde dat consumenten en bedrijven wereldwijd 5,3 biljoen dollar (4.650 miljard euro) per jaar meer voor hun fossiele brandstoffen zouden moeten betalen om de bijkomende kosten van vervuiling en gezondheidsschade te dekken. Dit bedrag is 6,5% van het wereldwijde bnp. Dat is meer dan de 6% die we wereldwijd jaarlijks aan gezondheidszorg uitgeven. Volgens het rapport dalen CO2-emissies met 20% als deze ‘subsidies’ zouden verdwijnen.<span data-bron='Coady, D. Parry, I. Sears, L. Shang, B. (2015) IMF Working Paper: How large are global Energy subsidies?' class='source_hover'><i class="fa fa-sun-o"></i></span> Een arme sloeber als ik kan zich onmogelijk voorstellen hoeveel geld vierduizendmiljard zeshonderdvijftigmiljoen euro is. Ofwel: bijna 4,7 biljoen. Dat is 14,5 miljard dollar per dag, 600 miljoen dollar per uur, 10 miljoen dollar per minuut, 168.000 dollar per seconde. NRC, Volkskrant, en Trouw kopte met dit nieuws. Mijn vriend kreeg gelijk, hoopte ik. Het keerpunt was bereikt. Het keerpunt van een pad van gebrek aan duurzaamheid en kennis naar een pad van groen ondernemen en bevlogen politieke en publieke discussies. De energie revolutie kon beginnen.</p>
+				<p>Er was geen geitenwol te bekennen. Ook geen hasj. Wel opvallend veel modern geklede giechelende meisjes. We kregen les in keurig geordende, smetteloze lokalen die niet persé de rechter helft van mijn brein stimuleerde.</p>
+				
+				<p>Mijn medestudenten bleken heel normale, sympathieke en bij gelegenheid gepassioneerde mensen te zijn, maar zeker geen wereldverbeteraars. Die conclusie had ik al snel getrokken. Ik was immers de enige vegetariër in de klas.</p> 
 
-<div class='kop kop2'><span class='hidden'>INLEIDING - </span>‘Jeetje, wat saai en onpersoonlijk...’</div> 
-				<p>Het IMF-rapport was voor mij persoonlijk bijzonder goed nieuws. Eindeloze discussies voerde ik op verjaardagen - en allerlei andere sociale gelegenheden waar ik mij altijd moet verantwoorden voor mijn vegetarisme en groene investeringen. Tegenstanders beweren vaak dat groene energietechnologieën - en juist niet de fossiele brandstoffen - niet rendabel zijn zonder subsidies. Omdat dit argument (voor zover ik weet) door invloedrijke instanties nooit empirisch weerlegd is, denken veel mensen dat de kosten voor water-, zonne- en windenergie hoger zijn dan die voor kolen, olie en gas. En ondanks het argument dat de kosten van groene energie drastisch zullen dalen met toenemend gebruik, blijven de voorstanders van fossiele brandstoffen beweren dat zij het financiële argument aan hun zijde hebben. Het rapport van het IMF ontkracht deze argumenten nu eindelijk.</p>
-				<p>Op dit moment is het oktober. Ik dacht dat het publieke en politieke debat nu toch echt wel losgebroken zou zijn. Maar eigenlijk heb ik er relatief weinig over gehoord, gezien of gelezen afgelopen maanden. Vijf maanden geleden dacht ik oprecht dat er iets zou gaan veranderen in het Nederlands energiebeleid. Of dat er minstens een debat over een aanzet tot verandering zou plaatsvinden. Mooi niet. De Nederlandse Staat werd zelfs aangeklaagd voor het belabberde energiebeleid wat ze voert. Wat overigens erg bijzonder en exceptioneel is. En dan met name de uitspraak van de rechter in deze zaak. Op 24 juni wonnen Urgenda en haar negenhonderd mede-eisers namelijk deze ‘Klimaatzaak’.<span data-bron='Schreuder, A. “Spectaculair vonnis houdt staat aan belofte.” NRC Handelsblad, 25-06-2015. p. 4-5' class='source_hover'><i class="fa fa-sun-o"></i></span> Het is de eerste keer dat een rechter een Staat verplicht om maatregelen te nemen tegen klimaatverandering. Internationaal heeft deze uitspraak veel impact want het een steun in de rug is voor alle klimaatzaken in andere landen.<span data-bron='Heck, W. “C02-uitstoot is een schending van de mensenrechten” NRC-Next, 04-12-2014. P. 13' class='source_hover'><i class="fa fa-sun-o"></i></span></p>
-				<p>Tegelijkertijd is het treurige dan weer dat ondanks tienduizenden verzoeken van topwetenschappers, burgers, bedrijven en de mede-eisers om niet in beroep te gaan, de Nederlandse Staat toch bij het Hof in hoger beroep gaat tegen het vonnis in de ‘Klimaatzaak’. Het vernielen van de aarde is zo rendabel dat de Nederlandse Staat weigert om iets te veranderen. Behoorlijk gênant als je het mij vraagt. Hoe is het toch mogelijk dat bedrijven zo absurd veel geld verdienen aan het verwoesten van onze aarde? Het lijkt alsof schade aanrichten de norm is geworden. Vervuiling is gewoonweg toegestaan. Sterker nog, de belangen van deze kapitalistische vervuiler worden beschermd door onze overheid!</p>
-				<p>Enfin. Mijn punt is het volgende: De aarde warmt op en dat is uiterst vervelend want daardoor verandert het klimaat. Poolkappen smelten, de zeespiegel stijgt en de gevolgen zijn niet te overzien. Onze energieopwekking, die voornamelijk bestaat uit het verbranden van fossiele brandstoffen, heeft hier een groot aandeel in. Maar naast de invloed van kolencentrales, fabrieken, bedrijven en de miljoenen auto’s die over ons wegenstelsel van zesbaanswegen scheuren, heeft ook onze voorkeur voor het opeten van dode dieren een flinke impact. De gevolgen voor de wereld door menselijk gedrag zijn enorm. Het goede nieuws is dat als de mens de grote veroorzaker van de opwarming is, hij ook in staat is om de opwarming tegen te gaan. Wij kunnen als beschaving het tij keren. De oplossing voor ons probleem is simpel. We moeten stoppen met de exploitatie van onze planeet. We moeten stoppen met het consumeren van dierlijk voedsel en stoppen met het verbranden van fossiele brandstoffen.</p> 
-				<p>Afgezien van alle politieke en financiële belangen van mega ondernemingen en hun lobbyisten - waarvan je kunt beweren dat zij feitelijk degene zijn die touwtjes in handen hebben, is het ook op individueel niveau verbazingwekkend lastig om gewoonten te veranderen. Ons brein is gebouwd om verandering te weerstaan. Onze hersenen zijn geëvolueerd om gedrag te automatiseren zodat we er verder niet over na hoeven te denken. Dat vergroot de overlevingskans. Gewoonten vormen de basis van ons dagelijks leven. We moeten ons niet vergissen in de invloed die het heeft op ons bestaan. Het is een pijnlijke observatie, maar eigenlijk denk ik dat het veranderen van menselijk gedrag alleen een kans van slagen heeft als er iets tegenover staat. Een alternatief. Zonder het aandragen van goede alternatieven zal er weinig veranderen. Gelukkig zijn er goede (groene) alternatieven in overvloed. We moeten deze alternatieven zo veel mogelijk steunen. Grafisch ontwerpers in het bijzonder kunnen een stimulerende rol hierin spelen. </p>
-				<p>In deze scriptie ga ik onderzoeken hoe grafisch ontwerpers en andere visualiseerders (kunstenaars/designers) dit reeds doen en op welke manier. Een aantal keer heb ik uitgelegd aan collega-studenten en grafisch ontwerpers waar ik mijn scriptie over schrijf. Erg enthousiast waren ze meestal niet. Iemand zei zelfs: ‘Jeetje, wat saai en onpersoonlijk...’ </p>
-				<p>Zoals wel vaker in het leven ben ik het weer eens volkomen met iemand oneens. Dit is een urgente en buitengewoon interessante kwestie en zeker niet onpersoonlijk. Voor de onwetende lijkt het misschien een formeel of buitengewoon onderwerp voor een kunstacademie scriptie. Maar mijn scriptie gaat over alles: de aarde, onze aarde, onze levende planeet. De samenleving, onze ecosystemen, de natuur maar ook over mijzelf. Ik zit niet te wachten op de verwoestende gevolgen van klimaatverandering zoals overstromingen, orkanen, tsunami’s of kanker. <span data-bron='Goldenberg, S. “Eight ways climate change is making the world more dangerous”, theguardian.com 14-07-2014' class='source_hover'><i class="fa fa-sun-o"></i></span><span data-bron='Redactie IPS “Klimaatverandering vormt groeiende bedreiging voor wereldsteden” IPSnews.be 30-09-13' class='source_hover'><i class="fa fa-sun-o"></i></span><span data-bron='Focus.be, “Hoe zou het zijn met het gat in de ozonlaag?” http://focus.knack.be/entertainment/hoe-zou-het-nog-zijn-met-het-gat-in-de-ozonlaag/article-normal-206189.html 20-08-12' class='source_hover'><i class="fa fa-sun-o"></i></span> Ik sterf graag een natuurlijke dood. </p>
-</div>
+				<p>Tot mijn genoegen werden er in de loop van mijn studiejaren wel steeds vaker opdrachten gegeven met een sociaal-maatschappelijk en/of politiek karakter. Vaak werd er tegen dit ‘soort’ opdrachten geprotesteerd, omdat ze je ‘in een bepaalde richting’ probeerden te duwen. Dit werd als moeilijk of als een belemmering van vrijheid ervaren. Belachelijk, vond ik, maar ik snapte de bezwaren wel. Hoe kun je je uiten over iets wat je niet bezig houdt? Niettemin ervaar ik het zelf als prettig om werk te zien met enige maatschappelijke relevantie. Over het algemeen deins ik terug voor vage verhalen die uitsluitend voor het individu die het bedacht heeft interessant zijn. Tenzij het een nuttige discussie aanwakkert natuurlijk. </p>
 
-				<div class='tekstvak feiten uit de klimaatwetenschap'>
-				<div class='kop kop1'>FEITEN UIT DE KLIMAAT WETENSCHAP</div>
-				<p>“De mensheid verandert de samenstelling van de dampkring snel en ingrijpend. De toegenomen concentratie kooldioxide en andere broeikasgassen kan niet gebagatelliseerd worden.” <span data-bron='Koninklijke Nederlandse Akademie van Wetenschappen. Klimaatverandering, Wetenschap en Debat. p.34' class='source_hover'><i class="fa fa-sun-o"></i></span>
+				<p>Maar goed, het is spijtig. Op de academie lopen weinig graphic design studenten rond met een voor mij inspirerende mentaliteit. Met regelmaat vraag ik mij af waar dat aan ligt. Is mijn generatie, ‘de individualisten’, een passieve of onverschillige? Het protest van mijn leeftijdgenoten beperkt zich voornamelijk tot het tot vlag transformeren van een profielfoto op Facebook. Hoe komt dat toch? Hoe zit het met onze morele plichten? Elke ontwerper met een beetje reële-wereldkennis zou toch zeggen dat er meer dan ooit boodschappers nodig zijn die uiting geven aan urgente kwesties. Waar buiten de academie zijn deze ontwerpers? Wat doen ze zoal? Waar zijn ze goed in? Hoe leveren zij een bijdrage aan een betere wereld?</p> 
+
+<div class='kop kop2'><span class='hidden'>&nbsp;&nbsp;&nbsp;&nbsp;Inleiding  &bull; </span> <b> Een goed onderwerp voor mijn scriptie </b></div>
+				<p>Op de vraag ‘waarom’ het juist voor een grafisch ontwerper nuttig is om maatschappelijke problemen aan de kaak te stellen, weet ik het antwoord wel. Waar ik in geïnteresseerd ben, is het antwoord op de vraag ‘hoe’ ik dat het best kan doen. Om op deze vraag een goed en specifiek antwoord te krijgen, ga ik mij richten op één urgent onderwerp. Een onderwerp dat wat mij betreft globaal de meest urgente van onze tijd is. </p> 
+
+				<p>Al jaren ben ik een fanatiek en enthousiast vegetariër. Toen ik het boek <i>Eating Animals</i> van Jonathan Safran Foer las, en er zo achter kwam welke gruwelijkheden zich afspelen in de bio-industrie en wat de impact van de vleesindustrie op ons milieu is, twijfelde ik geen seconde. Ik werd direct vegetariër. Het kostte me weinig moeite en hoe meer ik mij ging verdiepen in de beweegredenen voor vegetarisme, hoe vaker ik mij af vroeg waarom ik niet veel eerder dit besluit had genomen. In het begin van mijn anti-vlees avontuur dacht ik regelmatig: ‘Als mensen weten wat ik weet, krijgen ze geen gehaktbal meer door hun keel.’ Al snel bleek dit een illusie en een keiharde confrontatie met de realiteit van hoe ons menselijk brein schijnbaar werkt. Kan het mensen niets schelen dat we dieren uitbuiten, martelen en onze planeet ruïneren? Ik kan het mij moeilijk voorstellen.</p>  
+
+				<p>Dit onderwerp staat dicht bij mij. Het raakt mij diep en tegelijkertijd fascineert het mij mateloos. Het zou voor mijn scriptie en afstudeerproject een prima keuze zijn om mij te richten op (artistieke) acties tegen de vleesindustrie. Maar in mei dit jaar gebeurde er iets - en het kwam uit onverwachte hoek - waarvan ik overtuigd was dat het alles zou veranderen. Mijn vriend noemde het ‘een keerpunt in politiek, ondernemerschap en publieke opinie.’ En ik ‘een keiharde ontkrachting van alle stupide tegenargumenten die ik heb moeten aanhoren in de geschiedenis van mijn milieubewuste levensfase.’ Het Internationaal Monetair Fonds (IMF) - een VN-organisatie die haar 188 lidstaten adviseert over het voeren van financieel beleid - publiceerde een rapport waarin ze concludeerde dat consumenten en bedrijven wereldwijd 5,3 biljoen dollar (4.650 miljard euro) per jaar meer voor hun fossiele brandstoffen zouden moeten betalen om de bijkomende kosten van vervuiling en gezondheidsschade te dekken. Dit bedrag is 6,5% van het wereldwijde bnp. Dat is meer dan de 6% die we wereldwijd jaarlijks aan gezondheidszorg uitgeven. Volgens het rapport dalen CO2-emissies met 20% als deze ‘subsidies’ zouden verdwijnen. <span data-bron='Coady, D. Parry, I. Sears, L. Shang, B. (2015) IMF Working Paper: How large are global Energy subsidies?' class='source_hover'><i class="fa fa-sun-o"></i></span> </p>
+
+				<p>Een arme sloeber als ik kan zich onmogelijk voorstellen hoeveel geld vierduizend miljard zeshonderdvijftig miljoen euro is. (Ofwel: bijna 4,7 biljoen euro.) Dat is 12,8 miljard euro per dag, 540 miljoen euro per uur, 9 miljoen euro per minuut, 150.000 euro per seconde. NRC, Volkskrant, en Trouw kopte met dit nieuws. Mijn vriend kreeg gelijk, hoopte ik. Het keerpunt was bereikt. Het keerpunt van een pad van gebrek aan duurzaamheid en kennis naar een pad van groen ondernemen en bevlogen politieke en publieke discussies. De energie revolutie kon beginnen.</p>
+				</div>
+				<div class='tekstvak'>
+				<div class='kop kop2'><span class='hidden'> - Inleiding:</span><b>‘Jeetje, wat saai en onpersoonlijk...’</b></div> 
+				<p>Het IMF-rapport was en is voor mij persoonlijk bijzonder ‘bruikbaar’ nieuws. Eindeloze discussies voer ik op verjaardagen - en allerlei andere sociale gelegenheden waar ik mij altijd moet verantwoorden voor mijn vegetarisme en groene investeringen. Tegenstanders beweren vaak dat groene energietechnologieën - en juist niet de fossiele brandstoffen - niet rendabel zijn zonder subsidies. Omdat dit argument (voor zover ik weet) door invloedrijke instanties nooit empirisch weerlegd is, denken mensen dat de kosten voor water-, zonne- en windenergie hoger zijn dan die voor kolen, olie en gas. En ondanks het logische feit dat de kosten van groene energie drastisch zullen dalen bij toenemend gebruik, blijven de voorstanders van fossiele brandstoffen beweren dat zij het financiële argument aan hun zijde hebben. Het rapport van het IMF ontkracht deze argumenten nu eindelijk.</p>
+
+				<p>Op dit moment is het oktober. Ik dacht dat het publieke en politieke debat nu toch echt wel losgebroken zou zijn. Maar eigenlijk heb ik er relatief weinig over gehoord, gezien of gelezen. Vijf maanden geleden dacht ik dat er cruciale veranderingen in het Nederlandse energiebeleid zouden komen. Of dat er minstens een debat over een aanzet tot verandering zou plaatsvinden. Vooral omdat het rapport nadrukkelijk gaat over geld. Maar dat gebeurde niet. De Nederlandse Staat werd zelfs aangeklaagd voor het belabberde energiebeleid wat ze voert. De uitspraak van de rechter in deze zaak was overigens erg bijzonder en exceptioneel. Op 24 juni wonnen <i>Urgenda</i> en haar negenhonderd mede-eisers namelijk deze ‘Klimaatzaak’<span data-bron='Schreuder, A. “Spectaculair vonnis houdt staat aan belofte.” NRC Handelsblad, 25-06-2015. p. 4-5' class='source_hover'><i class="fa fa-sun-o"></i></span> Het was de eerste keer dat een rechter een Staat verplicht om maatregelen te nemen tegen klimaatverandering. Een grote stap in de goede richting zou je denken, maar het treurige feit dat de Nederlandse Staat bij het Hof in hoger beroep is gegaan tegen het vonnis - en dat ondanks tienduizenden verzoeken van topwetenschappers, burgers, bedrijven en de mede-eisers om niet in beroep te gaan - legt de vinger op de zere plek: het vernielen van de aarde is te rendabel om beleid te veranderen. Best gênant als je het mij vraagt. Schade aanrichten is een norm geworden. Vervuiling is gewoonweg toegestaan. Sterker nog, de belangen van kapitalistische vervuilers worden beschermd door onze overheid!</p>
+
+				<p>Enfin. Mijn punt is het volgende: De aarde warmt op en dat is uiterst vervelend want daardoor verandert het klimaat. Poolkappen smelten, de zeespiegel stijgt en de gevolgen zijn niet te overzien. Onze energieopwekking, die voornamelijk bestaat uit het verbranden van fossiele brandstoffen, heeft hier een groot aandeel in. Maar naast de invloed van kolencentrales, fabrieken, bedrijven en de miljoenen auto’s die over ons wegenstelsel van zesbaanswegen scheuren, heeft ook onze voorkeur voor het opeten van dode dieren een flinke impact. De gevolgen voor de wereld door menselijk gedrag zijn enorm. Wereldwijde emissies moeten in 2050 met 50% gedaald zijn als we de opwarming van de aarde tot 2 graden Celsius willen beperken.<span data-bron='Cox, R.H.J. (2011) Revolutie met Recht' class='source_hover'><i class="fa fa-sun-o"></i></span></p>
+
+				<p>Over 35 jaar is het 2050. Die datum ligt veel dichterbij dan we ons wellicht realiseren.</p>
+
+				<p>Echter, omdat de mens de grote veroorzaker is van de opwarming, is hij ook in staat om de opwarming tegen te gaan. Daarom is het belangrijk dat de algemene kennis over de gevolgen van klimaatverandering wordt uitgebreid. Mensen moet horen dat wij als beschaving het tij kunnen keren. En dat de oplossing niet ingewikkeld is: We moeten stoppen met de exploitatie van onze planeet. We moeten stoppen met het consumeren van dierlijk voedsel en stoppen met het verbranden van fossiele brandstoffen. Hierbij moet opgemerkt worden dat afgezien van alle politieke en financiële belangen van mega ondernemingen en hun lobbyisten (waarvan sommige beweren dat zij feitelijk degene zijn die touwtjes in handen hebben) het ook op individueel niveau verbazingwekkend lastig is om gewoonten te veranderen. Ons brein is gebouwd om verandering te weerstaan. Onze hersenen zijn geëvolueerd om gedrag te automatiseren zodat we er verder niet over na hoeven te denken. Dat vergroot de overlevingskans. Gewoonten vormen de basis van ons dagelijks leven. We moeten ons niet vergissen in de invloed die het heeft op ons bestaan. Dus ook is het van cruciaal belang dat mensen worden ingelicht over oplossingen voor dit probleem: duurzame alternatieven en andere leef- en eetgewoonten. Hier ligt voor grafisch ontwerpers, kunstenaars en andere visuele communicatie ‘deskundigen’ een grote uitdaging. Grafisch ontwerpers in het bijzonder kunnen een stimulerende rol hierin spelen omdat zij in staat zijn om complexe informatie op een toegankelijke en heldere manier aan groot publiek te brengen.</p>
+
+				<p>In deze scriptie ga ik onderzoeken wie dit reeds doen en op welke manier. Om te kunnen concluderen welke vormen van visuele communicatie en visueel verzet (kunnen) aanslaan bij een breed publiek, ga ik door middel van bestaande uitingen omtrent dit thema een analyse schrijven die de volgende vraag beantwoordt: <b>Hoe wordt grafisch ontwerp ingezet om de gevolgen van klimaatverandering aan de kaak te stellen?</b> Om een helder antwoord op deze vraag te genereren, ga ik te werk met de volgende subvragen in mijn achterhoofd: Hoe wordt de urgentie van dit mega probleem gevisualiseerd? Hoe creëer je algemeen bewustzijn hiervoor? Wie besteden hier aandacht aan? Welke methodes in termen van bereik (media) worden gebruikt? Hoe en welke alternatieven worden er geboden? Is er überhaupt sprake van positieve stimulatie of ligt de nadruk op misère?</p>
+
+				<p>Een aantal keer heb ik uitgelegd aan collega-studenten en grafisch ontwerpers waar ik mijn scriptie over schrijf. Erg enthousiast waren ze meestal niet. Iemand zei zelfs: ‘Jeetje, wat saai en onpersoonlijk...’ </p> 
+
+				<p>Zoals wel vaker in het leven ben ik het weer eens volkomen met iemand oneens. Dit is een urgente en buitengewoon interessante kwestie en zeker niet onpersoonlijk. Voor de onwetende lijkt het misschien een formeel of buitengewoon onderwerp voor een kunstacademie scriptie, maar dat is het natuurlijk niet. Mijn scriptie gaat in essentie over alles. Het gaat over de aarde, ónze aarde, ónze levende planeet. Het gaat over de samenleving, onze ecosystemen, de natuur maar ook over mijzelf. Ik zit niet te wachten op de verwoestende gevolgen van klimaatverandering zoals overstromingen, orkanen, tsunami’s of kanker.<span data-bron='Goldenberg, S. “Eight ways climate change is making the world more dangerous”, theguardian.com 14-07-2014' class='source_hover'><i class="fa fa-sun-o"></i></span><span data-bron='Redactie IPS “Klimaatverandering vormt groeiende bedreiging voor wereldsteden” IPSnews.be 30-09-13' class='source_hover'><i class="fa fa-sun-o"></i></span><span data-bron='Focus.be, “Hoe zou het zijn met het gat in de ozonlaag?” http://focus.knack.be/entertainment/hoe-zou-het-nog-zijn-met-het-gat-in-de-ozonlaag/article-normal-206189.html 20-08-12' class='source_hover'><i class="fa fa-sun-o"></i></span> Ik sterf graag een natuurlijke dood. </p>
+
+
+
+				</div> <!-- tekstvak -->
+
+
+				</div> <!-- kolom links -->
+
+				<div class='col-sm-6 rechts'>
+
+
+					
+				</div> <!-- kolom rechts -->
+				
+			</div> <!-- einde row -->
+
+
+			<div class='row'>
+
+				<div class='col-sm-6'>
+
+				<div class='tekstvak beknopte-lessen-uit-de-klimaatwetenschap'>
+					<a id='beknopte-lessen'></a>
+			
+				<div class='kop kop1'> <b>&nbsp;&nbsp;&nbsp;&nbsp;Beknopte lessen uit de klimaatwetenschap</b> </div>
+										<br />
+						<br />
+				<p><i>De mensheid verandert de samenstelling van de dampkring snel en ingrijpend. De toegenomen concentratie kooldioxide en andere broeikasgassen kan niet gebagatelliseerd worden.</i> <span data-bron='Koninklijke Nederlandse Akademie van Wetenschappen. Klimaatverandering, Wetenschap en Debat. p.34' class='source_hover'><i class="fa fa-sun-o"></i></span>
 				</p>
 			
 
-			<p>De aarde warmt op en als gevolg daarvan verandert het klimaat. De opwarming van de aarde is het gevolg van de toegenomen concentratie broeikasgassen. Het toenemend gebruik van fossiele brandstoffen als steenkool en aardolie heeft – samen met massale ontbossing – de afgelopen 150 jaar geleid tot een ophoping van kooldioxide (CO2) in de atmosfeer. Ook de concentraties van methaan en lachgas zijn volgens vrijwel elke meting de afgelopen eeuwen toegenomen. <span data-bron='Koninklijke Nederlandse Akademie van Wetenschappen. Klimaatverandering, Wetenschap en Debat. p.34' class='source_hover'><i class="fa fa-sun-o"></i></span>
-			</p>
+				<p>De aarde warmt op en als gevolg daarvan verandert het klimaat. De opwarming is het gevolg van de toegenomen concentratie broeikasgassen. Het toenemend gebruik van fossiele brandstoffen zoals steenkool en aardolie heeft – tezamen met massale ontbossing en de uitstoot van veeteelt – de afgelopen 150 jaar geleid tot een ophoping van kooldioxide (CO2), methaan (CH4) en lachgas (N2O) in de atmosfeer.<span data-bron='Koninklijke Nederlandse Akademie van Wetenschappen. Klimaatverandering, Wetenschap en Debat. p.34' class='source_hover'><i class="fa fa-sun-o"></i></span></p>
 
 
-<div class='kop kop2'><span class='hidden'>FEITEN UIT DE KLIMAATWETENSCHAP - </span> Ontbossing</div>
+<div class='kop kop2'><span class='hidden'> <b>&nbsp;&nbsp;&nbsp;&nbsp;Beknopte lessen uit de klimaatwetenschap</b> </span> <b>Ontbossing</b></div>
 
-	<p>We plunderen onze bossen. Elke twee seconden gaat een stuk bos zo groot als een voetbalveld tegen de vlakte. Dit doen we om op het vrijgekomen land koeien te laten grazen of landbouwgewassen te verbouwen. (Natuurlijk gebruiken we het hout ook voor de bouw en papier maar dit is secundair.) Omdat de wereldbevolking de afgelopen decennia explosief gegroeid is, wordt momenteel tweederde van alle landbouwgrond ter wereld gebruikt voor commerciële veeteelt en sojaproductie. 
-	Bij de teelt van soja en het houden van dieren komen CO2 , methaan en lachgas vrij. Deze gassen dragen bij aan de opwarming van de aarde. De vlees- en zuivelindustrie zijn behoorlijke boosdoeners. Ten eerste door de uitstoot van methaan (een zeer krachtig broeikasgas die ontstaat door de spijsvertering van koeien en andere herkauwers) Ten tweede door de enorme hoeveelheden plantaardig voedsel (voornamelijk soja) die deze industriën gebruiken. Afhankelijk van het soort dier is tot wel dertien kilo veevoer nodig voor de productie van één enkele kilo vlees. 
-	Het IPCC, een VN-organisatie die zich bezighoudt met de studie naar klimaatverandering, berekende dat ongeveer 12 procent van alle CO2-uitstoot die de mensheid veroorzaakt, te wijten is aan ontbossing. Dat is meer dan al het verkeer bij elkaar.<span data-bron='IPCC Intergovernmental Panel on Climate Change (2014) Summary for Policymakers. In: Climate Change 2014: Synthesis Report. Cambridge University Press, United Kingdom and New York.' class='source_hover'><i class="fa fa-sun-o"></i></span> Bossen produceren zuurstof en halen CO2 uit de lucht. Bij het kappen en verbranden van bos- en veengebieden komt koolstof vrij, dat in aanraking met zuurstof weer CO2 vormt.</p>
+				<p>We plunderen onze bossen. Elke twee seconden gaat een stuk bos zo groot als een voetbalveld tegen de vlakte. Dit doen we om op het vrijgekomen land koeien te laten grazen of landbouwgewassen te verbouwen. Uiteraard gebruiken we het hout voor de bouwsector en om papier te produceren, maar dit is secundair. Omdat de wereldbevolking de afgelopen decennia explosief gegroeid is, wordt momenteel tweederde van alle landbouwgrond ter wereld gebruikt voor commerciële veeteelt en sojaproductie. </p>
 
 
-<div class='kop kop2'><span class='hidden'>FEITEN UIT DE KLIMAATWETENSCHAP - </span> Fossiele brandstoffen</div>
+				<p>Bij de teelt van soja en het houden van dieren komen CO2 , methaan en lachgas vrij. De vlees- en zuivelindustrie dragen behoorlijk bij aan de opwarming van de aarde. Ten eerste door de uitstoot van methaan - een zeer krachtig broeikasgas die ontstaat door de spijsvertering van koeien en andere herkauwers. Ten tweede door de gigantische hoeveelheden plantaardig voedsel (voornamelijk soja) die deze industrieën gebruiken. Afhankelijk van het soort dier is tot wel dertien kilo voer nodig voor de productie van één enkele kilo vlees. </p>
+	
 
-	<p>Onze aarde heeft warme en koude periodes gekend. Dit zijn natuurlijke processen. Maar de situatie waarin we nu leven is anders. Mensen blijken in staat om klimaatverandering flink te beïnvloeden door op grote schaal fossiele brandstoffen te verbranden: aardgas, aardolie, steenkool en bruinkool. Voor gebruik worden deze grondstoffen omgezet in brandstoffen: benzine, diesel, kerosine en LPG. Veruit de meeste energie die we gebruiken (circa 93 procent) komt van fossiele brandstoffen.
-	Fossiele brandstoffen hebben een organische oorsprong. De koolstofverbindingen zijn ontstaan uit dood, plantaardig materiaal. Door bodemdaling of zeespiegelstijging, rot de dode biomassa van bossen niet weg, maar vormt een bodemlaag. Na een eerste simpele ontbinding en later door inklinking en fossilisering onder hoge druk diep onder het aardoppervlak wordt dit veen fossiele brandstof. Deze lagen kunnen uiteindelijk kilometers diep in de aarde terechtkomen en vele miljoenen jaren oud zijn. Sinds de industriële revolutie verbranden we op grote - en nog steeds op fors toenemende - schaal fossiele brandstoffen. Daarbij worden dagelijks tonnen CO2 de atmosfeer in gepompt. Dit broeikasgas levert daarmee de grootste bijdrage aan de wereldwijde klimaatverandering.<span data-bron='Schuiling, J. (2008)“Klimaatverandering is een keuze: Windturbines of waterover	last?” Greenpeace Nederland' class='source_hover'><i class="fa fa-sun-o"></i></span>
-	Het gebruik van fossiele brandstoffen moet omlaag. We moeten onze wereldwijde CO2-uitstoot terugdringen. Alleen dan kunnen we de temperatuurstijging nog beperken tot 2 graden Celsius. Volgens het Internationaal Energie Agentschap is dat de maximale grens om catastrofale klimaatverandering te voorkomen. De noodzaak om over te stappen op duurzame energie wordt nog eens versterkt door het eindige karakter van de (winbare) voorraden fossiele brandstoffen op onze planeet. Alhoewel de totale voorraad steenkool nog voor langere tijd toereikend is, nadert voor zowel aardolie als aardgas het moment dat de productie niet langer in de vraag kan voorzien. Zodra dat punt bereikt is, zal de vraag naar alternatieve energiebronnen acuut stijgen.</p>
-
-	<div class='kop kop2'><span class='hidden'>FEITEN UIT DE KLIMAATWETENSCHAP - </span> IMF: ‘how large are global energy subsidies?’</div>
-	<p> Feiten en cijfers. Niet iedereen is er dol op. Zelfs met feitelijk onderbouwde verhalen en - niet geheel onbelangrijk - het morele gelijk aan de zijde, is niet iedereen te overtuigen. Zouden deze mensen geen hersenen hebben? Nee. Sommige mensen interesseert het domweg niet. Andere mensen, werknemers van bedrijven met grote belangen in fossiele energie bijvoorbeeld,  zijn enkel geïnteresseerd in geld: winstmaximalisatie. Voor die laatste groep kwam er dit jaar slecht nieuws. Zoals ik in de inleiding al vertelde, publiceerde het IMF, een organisatie met nogal wat verstand van geld, afgelopen mei een weergaloos rapport waarin zij concludeerde dat consumenten en bedrijven wereldwijd 4.650 miljard euro per jaar meer voor hun fossiele brandstoffen zouden moeten betalen om de bijkomende kosten van vervuiling en gezondheidsschade te dekken. De bijkomende kosten voor milieu vervuiling spannnen wereldwijd de kroon met een bedrag van 2.480 miljard euro per jaar. De kosten voor de opwarming van de aarde bedragen 1.150 miljard euro per jaar. Hieronder valt bijvoorbeeld gezondheidsschade door luchtverontreiniging (fijnstof). Overige kosten zijn 877 miljard euro voor zaken als filevorming en schade aan wegen. En 300 miljard euro betreft directe overheidsubsidies in de vorm van consumptieve prijzen die lager liggen dan de productiekosten van fossiele brandstoffen. Grote bedrijven krijgen bij grote afname korting op de energierekening. Ook in Nederland krijgen grootverbruikers bij vrijwel iedere energieleverancier grote inkoopkortingen. De auteurs merken wel op dat het gros van het bedrag van 300 miljard toegeschreven kan worden aan het feit dat het gebruik van kolen in veel landen veel te laag wordt belast. Het probleem speelt daarom nog meer in opkomende landen als China, dan in Europa en de VS.</p>
-	<p>Volgens het rapport geeft Nederland 25 tot 40 miljard euro fossiele ‘subsidie’ weg. Dat is nogal schokkend te noemen als je het vergelijkt met de magere 1 miljard subsidie die voor windmolens wordt uitgetrokken. 10 van de 25 tot 40 miljard euro zijn indirecte overheidsubsidies voor de energierekeningen van bedrijven (aftrek posten en niet geïnde belastingen.) Verder maken we kosten voor gezondheidesschade door fijnstof van kolencentrales, verkeer en houtkachels. Ook zijn er kosten voor de zeespiegelstijging, de deltawerken, het ophogen van onze stranden en de afsluitdijk. Onze overheid stimuleert net als de rest van de wereld het gebruik van fossiele energie en feitelijk betekent dit dat het duurzame alternatieven zoals wind- en zonneenergie in de weg staat.</p>
-
-	<div class='kop kop2'><span class='hidden'>FEITEN UIT DE KLIMAATWETENSCHAP - </span> Klimaattop Parijs</div>
-	<p>Media en berichtgeving omtrent het IMF-rapport waren misschien matig te noemen, maar aan de klimaattop in Parijs werd gelukkig veel aandacht besteed. Van 30 november tot 11 december 2015 vond in Parijs de klimaattop ‘COP21’, The 21e Conference of Parties, plaats. Georganiseerd door de UNFCCC (the United Nations Framework Convention on Climate Change.) Sinds 1995 houdt het UNFCCC elk jaar een klimaattop. Het doel van de klimaattoppen is om tot effectieve internationale samenwerking te komen in de strijd tegen klimaatverandering en daarbij ‘gevaarlijke klimaatverandering’ te voorkomen. (Er is internationaal besloten dat de gemiddelde mondiale opwarming onder de 2 gradem moet blijven.) De conferentie in Parijs was erg belangrijk omdat er getracht werd een slotakkoord te bereiken voor een nieuw internationaal klimaatverdrag. Het was de derde poging om tot zo’n verdrag te komen: in 1997 werd in  Japan het ‘Kyoto-protocol’ afgesloten, met 2012 als richtjaar. In 2009 had in Kopenhagen tijdens ‘COP15’ een vervangend klimaatverdrag tot 2020 moeten komen, veel omvangrijker dan het Kyoto-protocol. Maar die top mislukte. In Parijs was de herkansing van de klimaattop in Kopenhagen, met als richtjaar 2030. Op 12 december stemden de bijna 200 deelnemers in met een nieuw bindend klimaatakkoord. Daar in staat dat de uitstoot van broeikasgassen moet worden teruggedrongen en de opwarming van de aarde beperkt moet worden tot maximaal 2 graden, met 1,5 graad als streefwaarde. Om onder de 2 graden te blijven mag de wereld in totaal niet meer dan ongeveer drieduizend gigaton CO2 uitstoten. Meer dan de helft daarvan hebben we sinds 1850 al in de atmosfeer gepompt en in het huidige tempo zitten we rond 2040 aan onze taks en zal de tweegradengrens bereikt worden.
-	Dit klimaatakkoord is goed nieuws. Het is een belangrijk signaal voor de kapitalistische wereld (beleggers, investeerders etc.) We moeten ons echter geen illusies maken: het gaat de wereld niet redden. Het schiet feitelijk bij voorbaat al tekort. Alle nationale klimaatvoornemens samen beperken de opwarming hooguit tot zo’n 2,7 graden extra in het jaar 2100. Dat is beter dan helemaal geen afspraken en het vooruitzicht van 4 graden extra als we niets doen, maar het is nog steeds te veel. Bovendien zijn het alleen maar plannen en voornemens; en we weten allemaal wat daar meestal van terecht komt... Na de klimaattop in Parijs kunnen we nog steeds niet gaan zitten wachten op oplossingen en denken dat het later wel goedkomt. Zonder inspanningen kan het eind deze eeuw zomaar vier graden warmer zijn en waarschijnlijk zelfs meer. Dan leven we in een wereld die nog meer lijdt onder extreme droogtes, misoogsten, hittegolven, orkanen, overstromingen en ‘tsunami’s’ van klimaatvluchtelingen. Voor welvarende Nederlanders lijkt dat misschien onwerkelijk. Dramatische veranderingen komen vaak pas binnen, als ze letterlijk een gezicht krijgen. Maar ook de Nederlandse kust zou door een vloedgolf getroffen kunnen worden, wanneer een grote massa ijs aan de oostrand van Groenland in zee glijdt. 
-	We moeten gewoon aan de slag. Nu meteen.</p>
+				<p>Het IPCC, een VN-organisatie die onderzoek doet naar klimaatverandering, berekende dat ongeveer 12 procent van alle CO2-uitstoot die de mensheid veroorzaakt, te wijten is aan ontbossing. Dat is meer dan al het verkeer bij elkaar.<span data-bron='IPCC Intergovernmental Panel on Climate Change (2014) Summary for Policymakers. In: Climate Change 2014: Synthesis Report. Cambridge University Press, United Kingdom and New York.' class='source_hover'><i class="fa fa-sun-o"></i></span> Bossen zijn van cruciaal belang voor de mensheid omdat bomen CO2 uit de lucht halen en zuurstof produceren. Maar bij het kappen en verbranden van bos- en veengebieden komt koolstof vrij, dat in aanraking met zuurstof weer CO2 vormt.</p>
 
 
+<div class='kop kop2'><span class='hidden'> <b>&nbsp;&nbsp;&nbsp;&nbsp;Beknopte lessen uit de klimaatwetenschap</b> </span> <b>Fossiele brandstoffen</b></div>
+
+				<p>Onze aarde heeft warme en koude periodes gekend. Dit zijn natuurlijke processen. De situatie waarin we nu leven is anders. Mensen blijken in staat om klimaatverandering flink te beïnvloeden door op grote schaal fossiele brandstoffen te verbranden: aardgas, aardolie, steenkool en bruinkool. Voor gebruik worden deze grondstoffen omgezet in brandstoffen: benzine, diesel, kerosine en LPG. Veruit de meeste energie die we gebruiken (circa 93 procent) komt van fossiele brandstoffen.</p>
+
+				<p>Fossiele brandstoffen hebben een organische oorsprong. De koolstofverbindingen zijn ontstaan uit dood, plantaardig materiaal. Door bodemdaling of het stijgen van de zeespiegel rot de dode biomassa van bossen niet weg, maar vormt een bodemlaag. Na een eerste simpele ontbinding en later door inklinking en fossilisering onder hoge druk diep onder het aardoppervlak wordt dit veen fossiele brandstof. Deze lagen kunnen uiteindelijk kilometers diep in de aarde terechtkomen en vele miljoenen jaren oud zijn.</p>
+
+				<p>Sinds de industriële revolutie verbranden we op grote, en nog steeds op fors toenemende schaal, fossiele brandstoffen. Daarbij worden dagelijks tonnen CO2 de atmosfeer ingepompt. Dit broeikasgas levert daarmee de grootste bijdrage aan de wereldwijde klimaatverandering. Om de temperatuurstijging te kunnen beperken tot 2 graden Celsius, (volgens het Internationaal Energie Agentschap is dat de maximale grens om catastrofale klimaatverandering te voorkomen) moet het gebruik van fossiele brandstoffen fors dalen. De noodzaak om over te stappen op duurzame energie is dus onontkoombaar en wordt nog eens versterkt door het eindige karakter van de winbare voorraden fossiele brandstoffen op onze planeet. Alhoewel de totale voorraad steenkool nog voor langere tijd toereikend is, nadert voor zowel aardolie als aardgas het moment dat de productie niet langer in de vraag kan voorzien. Zodra dat punt bereikt is, zal de vraag naar alternatieve energiebronnen acuut stijgen.</p>
+
+				</div> <!-- tekstvak -->
+
+
+				</div> <!-- kolom links -->
+
+				<div class='col-sm-6 rechts'>
+
+				
+
+						<span class='titel-klein'>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<b>2011, KONINKLIJKE NEDERLANDSE AKADEMIE VAN WETENSCHAPPEN<br />
+	'KLIMAATVERANDERING, WETENSCHAP EN DEBAT' </b><br /><br />
+
+<b>Toename broeikasgassen in atmosfeer</b><br />
+De samenstelling van de dampkring verandert in de loop van honderden, duizenden
+en miljoenen jaren voortdurend. Sinds de laatste ijstijd is die verandering echter
+nooit zo snel gegaan als de afgelopen eeuw, en een substantieel deel van die verandering
+is zeker op het conto van menselijke activiteit te schrijven. Het toenemend
+gebruik van fossiele brandstoffen als steenkool en aardolie heeft – samen met massale
+ontbossing – de afgelopen 150 jaar geleid tot een ophoping van kooldioxide in
+de atmosfeer. Ook de concentraties van methaan en lachgas zijn volgens vrijwel elke
+meting de afgelopen eeuwen toegenomen.
+<br /><br />
+In 1960 vond men dat in de heldere lucht boven Hawaï 317 moleculen kooldioxide
+op elke miljoen luchtmoleculen zaten. In 2008 was deze concentratie daar
+opgelopen tot 386 deeltjes per miljoen, en dit getal loopt inmiddels met ongeveer 2
+per jaar op. Terugkijkend in de tijd, onder meer uit onderzoek van luchtbelletjes in
+eeuwenoud ijs op Antarctica, blijkt dat rond 1750, dus voor de Industriële Revolutie,
+de concentratie ongeveer 280 deeltjes per miljoen was.
+<br /><br />
+Deze stijging wordt met zekerheid veroorzaakt door menselijke activiteiten. De
+verbranding van fossiele energiebronnen brengt kooldioxide in de atmosfeer, terwijl
+methaan en lachgas vooral zijn toe te schrijven aan de veranderingen in en de
+uitbreiding van de landbouw en veeteelt en het toegenomen verkeer. Deze verschillende
+bronnen kunnen herkend worden in de atmosfeer door gebruik te maken
+van specifieke eigenschappen van koolstof, zuurstof en stikstof die deze bronnen
+veroorzaken. Zo is koolstof in het kooldioxide afkomstig van fossiele brandstoffen
+eenduidig te herkennen.
+<br />
+<br />
+<b>Opname extra kooldioxide door zee en land</b><br />
+Uit de totale hoeveelheid gebruikte fossiele brandstoffen in de wereld valt betrekkelijk
+eenvoudig uit te rekenen hoeveel kooldioxide er in totaal in de atmosfeer is
+terechtgekomen. Dat zou, in het jaar 2000, hebben moeten leiden tot een concentratie
+van ongeveer 440 deeltjes per miljoen. In werkelijkheid werden 369 deeltjes per
+miljoen gemeten. Dat betekent dat een deel van de extra kooldioxide door verschillende
+ecosystemen wordt opgenomen. De oceaan speelt bij deze opname de grootste
+rol, en in natuurlijk landschap kan ook de vegetatie veel koolstof doorsluizen
+naar de bodem en naar veenpakketten. Planten groeien beter als er meer kooldioxide
+in de lucht is, en als er meer vegetatie is, wordt meer kooldioxide opgenomen en
+vastgelegd. Bodems onder graslanden blijken – meer nog dan bodems onder bossen
+– veel kooldioxide te kunnen opnemen. Samen blijken oceanen en landplanten tot
+op heden in staat ongeveer de helft van het extra kooldioxide vast te leggen.
+<br /><br />
+Die absorptie van kooldioxide in het zeewater zou overigens wel een nieuw
+risico kunnen vormen. Het is een feit dat water door de opname van kooldioxide
+zuurder wordt – water plus kooldioxide geeft koolzuur. Dit gebeurt dus ook met de
+18 klimaatverandering, wetenschap en debat
+oceanen. Daarmee verplaatst in ieder geval een deel van het probleem zich dus van
+lucht naar zee. De bezorgdheid over de verzuring is de laatste jaren gegroeid; over
+de exacte gevolgen bestaat nog veel onduidelijkheid.
+<br />
+<br />
+<b>Temperaturen</b><br />
+Terwijl de afgelopen eeuw de concentratie kooldioxide in de dampkring toenam,
+nam ook de gemiddelde temperatuur op aarde toe. Een oorzakelijk verband ligt
+voor de hand. Zeker omdat kooldioxide, net als methaan en lachgas, een zogenaamd
+‘broeikasgas’ is.
+<br /><br />
+De aarde warmt op door de zon, terwijl broeikasgassen de afkoeling van de
+aarde belemmeren. Er is op de lange termijn een evenwicht tussen opwarming en
+afkoeling, maar naarmate er meer broeikasgassen in de atmosfeer zijn, is de temperatuur
+waarbij dat evenwicht wordt bereikt, hoger.
+<br /><br />
+De afgelopen eeuw is de temperatuur van het aardoppervlak tussen de 0,6 en 0,9
+graden gestegen. Dat is een gemiddelde: terwijl de gematigde streken en de poolstreken
+vrij sterk opwarmden, warmden de tropen veel minder op. Koeler werd het
+eigenlijk de afgelopen honderd jaren nergens; de gemiddelde temperatuur van alle
+meetstations op aarde tezamen (de ‘wereldgemiddelde temperatuur’) is sinds 1980
+elke tien jaar met ongeveer 0,2 graden gestegen.
+<br /><br />
+De volgende vraag is dan, hoeveel warmt de aarde op als bijvoorbeeld de hoeveelheid
+kooldioxide in de dampkring is verdubbeld ten opzichte van voor de industriële
+revolutie?
+<br /><br />
+De zoektocht naar het antwoord op die vraag is, in een notendop, het wetenschappelijk
+klimaatdebat. Het IPCC komt tot de volgende conclusie: een verdubbeling
+van de hoeveelheid kooldioxide leidt tot een opwarming die waarschijnlijk
+tussen de 1,7 en 4,4 graden ligt. Die marges zijn een maat voor de onzekerheid. Het
+wetenschappelijk onderzoek probeert die marges beter te onderbouwen en liefst
+nog te verkleinen, maar het is de vraag of dat laatste wel mogelijk is in de mate
+waarin we dat zouden willen.
+<br /><br />
+In het klimaatdebat spelen speculaties over die onder- en bovengrens een belangrijke
+rol. Er zijn klimaatonderzoekers die redenen hebben te denken dat het
+klimaat minder gevoelig is en dat de stijging van de temperatuur bij een verdubbeling
+van het kooldioxidegehalte hooguit 1 graad zal zijn, en onderzoekers die menen
+dat de schatting van het IPCC veel te laag is. Een enkeling meent dat het door de
+toename van kooldioxide helemaal niet warmer zal worden; er is eigenlijk niemand
+die meent dat die toename leidt tot afkoeling.
+<br /><br />
+De opwarming uit zich overigens ook in andere effecten. Enkele voorbeelden
+daarvan: De zeespiegel is in de afgelopen eeuw, mede als gevolg van klimaatverandering,
+met ongeveer 17 centimeter gestegen; Het totaaloppervlak zee-ijs in het
+noordpoolgebied is sinds 1978 met drie procent per tien jaar geslonken; En verspreidingsgebieden
+van diverse soorten organismen zijn daardoor gewijzigd.
+<br />
+<br />
+<b>De rol van de mens</b><br />
+De wereldbevolking kent de afgelopen periode een spectaculaire groei. Waar rond
+het begin van onze jaartelling naar schatting 300 miljoen mensen de aarde bevolkten,
+bereikten we het eerste miljard rond 1800 en groeien we naar zeven miljard
+mensen in 2011. Die sterk gegroeide populatie heeft een toenemende invloed op
+de staat van ‘planeet Aarde’ en is op haar beurt gevoelig voor klimaatveranderingen.
+Denk hierbij bijvoorbeeld aan de sterk toegenomen bevolkingsconcentraties in
+voor zeespiegelstijging gevoelige gebieden.
+<br /><br />
+De mens heeft overigens meer invloed op het klimaat dan alleen door de uitstoot
+van broeikasgassen. Zo is veranderend landgebruik een belangrijke factor. En ingrepen
+die we om diverse redenen doen, kunnen verschillend uitpakken. Zo zouden
+maatregelen om de lucht schoner te maken, kunnen leiden tot een opwarming van
+de aarde (bij schonere lucht is er minder koeling door stofdeeltjes), terwijl de aanplant
+van bossen en beter beheer van graslanden de opwarming wellicht kunnen
+verminderen.
+<br /><br />
+Hierbij dient bedacht te worden dat beleidskeuzen niet alleen klimatologische,
+maar ook politieke, economische, sociale en psychologische aspecten hebben. De
+derde werkgroep van het IPCC is op deze wisselwerkingen veel dieper ingegaan, hier
+stippen wij slechts enkele voorbeelden aan. Zo kan de overheid besluiten tot opslag
+van kooldioxide in de diepe ondergrond, maar het recente verleden laat zien dat zij
+daarbij niet kan voorbijgaan aan de maatschappelijke gevolgen van zo’n maatregel. Belasting
+op uitstoot van kooldioxide en energieheffingen zijn ingrepen die al evenzeer
+allerlei verwachte maar ook onverwachte en ongewenste gevolgen kunnen hebben.
+Maatregelen die het autogebruik moeten beperken, kunnen ingrijpen op de privacy.
+Keuzes voor bepaalde energiedragers en geavanceerde ecologische landbouwmethoden
+kunnen zeer verstrekkende consequenties hebben – op klimaatgebied, maar
+ook voor bijvoorbeeld economische ontwikkeling. Dat vormt zeker voor landen in de
+Derde Wereld een kans maar ook vaak een ernstig dilemma.
+<br />
+<br />
+<b>Samenvattende statements</b><br />
+a. De mensheid verandert de samenstelling van de dampkring snel en ingrijpend.
+De toegenomen concentratie kooldioxide en andere broeikasgassen
+kan niet gebagatelliseerd worden.
+<br />
+<br />
+b. Ongeveer de helft van het door de mens extra geproduceerde kooldioxide
+blijft in de atmosfeer. De rest wordt door de oceanen en de landvegetatie/-
+bodem opgenomen.
+<br />
+<br />
+c. De absorptie van kooldioxide in oceanen leidt tot verzuring van hun water.
+Ontbossing en urbanisatie leidt tot een verminderde opname van kooldioxide
+door de bodem.
+<br />
+<br />
+d. De laatste vijftig jaar is er sprake van een stijging van de wereld gemiddelde
+temperatuur. De periode 2001-2010 was het warmste decennium sinds de
+systematische metingen rond 1850 begonnen.
+<br />
+<br />
+e. De huidige klimaatmodellen verklaren klimaatveranderingen in de 20e eeuw
+in hoge mate. Volgens deze modellen is de waargenomen stijging van de gemiddelde
+temperatuur op aarde niet goed te verklaren zonder het effect van
+de door de mens extra geproduceerde broeikasgassen in de berekeningen
+te betrekken.
+<br />
+<br />
+f. Als we het scenario volgen van het gebruik van steeds meer fossiele brandstoffen
+geven de modelprojecties aan dat de gemiddelde temperatuur op
+aarde in het jaar 2100 tussen de 1,1 en 6,4 graden hoger zou kunnen zijn
+dan in 1990.
+<br />
+<br />
+g. Minieme veranderingen kunnen grote gevolgen hebben voor het klimaat.
+Deze eigenschap is, zeker voor een uniek systeem als het klimaat, een dwingende
+reden om grote abrupte (op de tijdschaal van tientallen jaren) veranderingen
+(b.v. een enorme stijging van kooldioxide) zoveel mogelijk te
+beperken.
 
 
 
+</span>	
+
+				</div> <!-- kolom rechts -->
+				
+			</div> <!-- einde row -->
+
+
+			<div class='row'>
+
+				<div class='col-sm-6'>
+
+
+
+				<div class='tekstvak recente ontwikkelingen'>
+
+				<a id='recente-ontwikkelingen'></a>
+			
+				<div class='kop kop1'> <b>&nbsp;&nbsp;&nbsp;&nbsp;Recente ontwikkelingen</b> </div>
+
+				<div class='kop kop2'><span class='hidden'> - Recente ontwikkelingen </span>
+						<br />
+				<b> IMF: ‘how large are global energy subsidies?’</b></div>
+				<p> Feiten en cijfers. Niet iedereen is er dol op. Zelfs feitelijk onderbouwde materie en - niet geheel onbelangrijk - het morele gelijk, overtuigt niet iedereen.  Sommige mensen interesseert het domweg niet. Andere mensen, beleidmakers van bedrijven met grote belangen in fossiele energie bijvoorbeeld,  zijn enkel geïnteresseerd in geld: winstmaximalisatie. Voor die laatste groep kwam er dit jaar slecht nieuws. Zoals ik in de inleiding al vertelde, publiceerde het IMF, een organisatie met nogal wat verstand van geld, in mei 2015 een weergaloos rapport waarin zij concludeerde dat consumenten en bedrijven wereldwijd 4.650 miljard euro per jaar meer voor hun fossiele brandstoffen zouden moeten betalen om de bijkomende kosten van vervuiling en gezondheidsschade te dekken. De bijkomende kosten voor milieuvervuiling spannen wereldwijd de kroon met een bedrag van 2.480 miljard euro per jaar. Overige kosten zijn bijvoorbeeld gezondheidsschade door luchtverontreiniging (fijnstof) en directe overheidssubsidies in de vorm van consumptieve prijzen die lager liggen dan de productiekosten van fossiele brandstoffen. Grote bedrijven krijgen bij grote afname korting op de energierekening. Ook in Nederland krijgen grootverbruikers bij vrijwel iedere energieleverancier grote inkoopkortingen. </p>
+	
+				<p>Volgens het rapport geeft Nederland 25 tot 40 miljard euro fossiele ‘subsidie’ weg. Dat is nogal schokkend te noemen als je het vergelijkt met de magere 1 miljard subsidie die voor windmolens wordt uitgetrokken. 10 miljard euro van het bedrag  zijn indirecte overheidssubsidies voor de energierekeningen van bedrijven (aftrek posten en niet geïnde belastingen.) Verder maken we ook in Nederland hoge kosten voor gezondheidsschade door fijnstof van kolencentrales, verkeer en houtkachels. Verder zijn er kosten voor de zeespiegel stijging, de deltawerken, het ophogen van onze stranden en de afsluitdijk. Onze overheid stimuleert net als de rest van de wereld het gebruik van fossiele energie enorm en feitelijk betekent dit dat het duurzame alternatieven zoals wind- en zonne-energie in de weg staat.</p>
+
+
+				</div> <!-- tekstvak -->
+
+
+				</div> <!-- kolom links -->
+
+				<div class='col-sm-6 rechts'>
+
+			
+
+					<span class='titel-klein'>
+						<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<b>2015, IMF WORKING PAPER<br />
+	'HOW LARGE ARE GLOBAL ENERGY SUBSIDIES?' </b><br /><br />
+
+<b>V. CONCLUSIONS</b><br />
+Global post-tax energy subsidies—after incorporating the most recent estimates of the
+environmental damage from energy consumption—are substantially higher than previously
+estimated. The estimate for 2011—at $4.2 trillion (5.8 percent of global GDP)—is more than
+double the amount reported by Clements and others (2013). The estimate grows to
+$4.9 trillion (6.5 percent of global GDP) in 2013 and is projected to remain high at
+$5.3 trillion (6.5 percent of global GDP) in 2015 despite the large drop in international
+energy prices. This trend suggests that energy subsidy reform is as urgent as ever, in
+particular to tackle the un-priced externalities from energy consumption. Low international
+energy prices provide a window of opportunity for countries to eliminate pre-tax subsidies
+and raise energy taxes as the public opposition to reform is likely to be somewhat more
+muted.
+<br /><br />
+Of course, energy subsidies vary substantially by region and so does the urgency of reform.
+In dollar terms, Emerging and Developing Asia accounts for about half of post-tax subsidies
+in 2013, and advanced economies account for about one-quarter. Emerging and Developing
+Asia and CIS countries have the highest energy subsidies in terms of percent of regional
+GDP, at more than 16 percent in both regions on average. Much of this is due to the high
+level of coal use in these regions where subsidies for coal are estimated at about $2 trillion
+(2.7 percent of global GDP or more than 40 percent of global post-tax subsidies) in 2013 and
+are projected to reach $2.5 trillion in 2015 (3.1 percent of global GDP or nearly 50 percent of
+global subsidies), reflecting significantly larger negative health effects in developing
+countries. Therefore, reforming coal subsidies through an environmental tax should be at the
+top of the policy agenda of these countries to limit the environmental damage from coal
+consumption.
+<br /><br />
+This does not mean that subsidy reform for other energy products is less important. In fact,
+petroleum subsidies are also high—at about $1.6 trillion (2.2 percent of global GDP) in
+2013—and are projected to remain high at $1.4 trillion (1.7 percent of global GDP) in 2015.
+Petroleum subsidy reform is particularly important for advanced economies as they account
+for the largest share at about 44 percent in 2015. Natural gas subsidies accounted for about
+$510 billion in 2015 and are most significant in the CIS, where they cost just below 4 percent
+of regional GDP. Electricity subsidies cost about $148 billion in 2015 and are costly across
+the developing economies.
+<br /><br />
+While externality cost accounts for the bulk of the post-tax energy subsidies, at more than
+80 percent in both 2013 and 2015, a detailed examination reveals that about three-fourths of
+these subsidies are related to local environmental damages and only about a quarter are due
+to global warming effect of CO2 emissions. This suggests that most of the environmental
+benefits from energy subsidy reform would accrue to the local population. Our estimates
+indicate that removing post-tax energy subsidies could reduce premature deaths from local
+air pollution by more than 50 percent on average. In addition, energy subsidy reform could
+30
+generate a substantial fiscal dividend in government revenues, estimated at $3.0 trillion
+(4.0 percent of global GDP) in 2013 and projected to reach $2.9 trillion (3.6 percent of global
+GDP) in 2015. This would be particularly important for countries that are facing high debt
+levels or fiscal imbalances. Thus, there are compelling reasons for countries to move ahead
+with energy subsidy reform unilaterally for their own good. Of course, these reforms—
+moving energy prices to efficient levels excluding global warming damage—would also
+bring substantial benefits for climate change with a CO2 emission reduction of 17 percent in
+2015. This compares to a reduction of 24 percent when energy prices are increased to the
+fully efficient levels.
+<br /><br />
+Energy subsidy reform could improve social welfare significantly, estimated at $1.4 trillion
+(2 percent of global GDP) in 2013 and projected at $1.8 trillion (2.2 percent of global GDP).
+If the fiscal gain is used to reduce distortionary labor taxes or to increase productive public
+spending on education, health, and public investment, the total welfare gain from energy
+subsidy reform could be even larger. This reinforces the case for unilateral action by
+countries.
+<br /><br />
+While energy subsidy reform is clearly beneficial from the view of the entire society, there
+are potentially important distributional issues as the fiscal and environmental benefits and the
+welfare loss from consumption reduction may accrue to different segments of the population.
+For example, most of environmental benefits may go to urban populations. This creates
+winners and losers from energy subsidy reform, which can introduce major obstacles to
+achieving energy subsidy reform. In addition, energy subsidy reform should protect the poor
+and vulnerable, making sure their well-being is not adversely affected. The proper use of the
+fiscal gain would be crucial in addressing this issue as well as the overall distributional
+impact of reform benefits. Higher energy prices will also harm energy-intensive firms.
+While, in the longer run, resources need to move out of activities that cannot be profitable
+with socially appropriate energy prices, transitory assistance may be needed, such as worker
+retraining programs and temporary relief for firms. The pace and sequencing of subsidy
+reform should therefore reflect the need to strengthen the capacity of some governments to
+develop effective policy instruments to protect vulnerable groups. Existing studies also
+highlight the importance of having a comprehensive and well communicated reform strategy
+addressing distributional concerns and other reform barriers (Clements and others 2014).
+<br /><br />
+In summary, environmental damages from energy subsidies are large, and energy subsidy
+reform through efficient energy pricing is urgently needed. While there may be more
+efficient instruments than environmental taxes for addressing some of the externalities,
+energy taxes remain the most effective and practical tool until such other instruments become
+widely available and implemented. Similarly, although it may not be realistic to raise energy
+prices to efficient levels in one step, since there are uncertainties in the estimates of efficient
+levels of taxes, countries should take advantage of the low international energy prices and
+gradually move toward efficient energy pricing.
+<br /><br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span>		
+				</div> <!-- kolom rechts -->
+				
+			</div> <!-- einde row -->
+
+
+			<div class='row'>
+
+				<div class='col-sm-6'>
+					<div class='tekstvak'>
+
+
+
+
+
+
+
+
+
+
+				<div class='kop kop2'><span class='hidden'> - Recente ontwikkelingen </span> <b>Klimaattop Parijs</b></div>
+				
+				<p>Media en berichtgeving omtrent het IMF-rapport waren misschien matig te noemen, maar aan de klimaattop in Parijs werd gelukkig veel aandacht besteed. Van 30 november tot 11 december 2015 vond in Parijs de klimaattop <i>COP21</i>, The 21e Conference of Parties, plaats. Georganiseerd door de UNFCCC (the United Nations Framework Convention on Climate Change.) Sinds 1995 houdt het UNFCCC elk jaar een klimaattop. Het doel is om tot effectieve internationale samenwerking te komen in de strijd tegen klimaatverandering en daarbij gevaarlijke klimaatverandering te voorkomen. In Parijs werd getracht een slotakkoord te bereiken voor een nieuw internationaal klimaatverdrag. Het was de derde poging om tot een verdrag te komen: in 1997 werd in Japan het <i>Kyoto-protocol</i> afgesloten, met 2012 als richtjaar. In 2009 had in Kopenhagen tijdens <i>COP15</i> een vervangend klimaatverdrag tot 2020 moeten komen. Maar die top mislukte. In Parijs was de herkansing van de klimaattop in Kopenhagen, met als richtjaar 2030. Op 12 december stemden de bijna 200 deelnemers in met een nieuw bindend klimaatakkoord. Er werd besloten dat de uitstoot van broeikasgassen moet worden teruggedrongen en de opwarming van de aarde beperkt moet worden tot maximaal 2 graden, met 1,5 graad als streefwaarde. Om onder de 2 graden te blijven mag de wereld in totaal niet meer dan ongeveer drieduizend gigaton CO2 uitstoten.<span data-bron='UNFCCC, Paris Agreement, 2015' class='source_hover'><i class="fa fa-sun-o"></i></span>  Meer dan de helft daarvan hebben we sinds 1850 al in de atmosfeer gepompt en in het huidige tempo zitten we rond 2040 aan onze taks en zal de ‘twee graden grens’ bereikt worden.</p>
+
+				<p> Dit klimaatakkoord is goed nieuws. Het is een belangrijk signaal voor de kapitalistische wereld (zoals beleggers, investeerders etc.) We moeten ons echter geen illusies maken; het gaat de wereld niet redden. Het schiet feitelijk bij voorbaat al tekort. Alle voornemens samen beperken de opwarming hooguit tot zo’n 2,7 graden extra in het jaar 2100. Dat is beter dan helemaal geen afspraken en het vooruitzicht van 4 graden extra als we niets doen, maar het is nog steeds te veel. Bovendien zijn het alleen maar plannen en voornemens. We weten allemaal wat daar meestal van terecht komt... Na de klimaattop in Parijs kunnen we nog steeds niet gaan zitten wachten op oplossingen en denken dat het later wel goedkomt. Zonder inspanningen kan het eind deze eeuw zomaar vier graden warmer zijn en waarschijnlijk zelfs meer. Dan leven we in een wereld die nog meer lijdt onder extreme droogtes, misoogsten, hittegolven, orkanen, overstromingen en ‘tsunami’s’ van klimaatvluchtelingen. Voor welvarende Nederlanders lijkt dat misschien onwerkelijk. Dramatische gebeurtenissen komen meestal pas binnen als ze een gezicht krijgen. Ook de Nederlandse kust zou door een vloedgolf getroffen kunnen worden, wanneer een kolossale massa ijs aan de oostrand van Groenland in zee stort. </p>
+
+				<p>We moeten gewoon aan de slag. Liever gister dan vandaag.</p>
 
 </div>
+
+</div> <!-- kolom links -->
+
+
+
+				<div class='col-sm-6 titel-klein'>
+					<br />
+					<br />
+							<b>2015, UNFCCC<br />
+							'ADOPTION OF THE PARIS AGREEMENT' </b><br /><br />
+
+						<b>PARIS AGREEMENT 1 t/m 15</b><br />
+						The Parties to this Agreement,
+						Being Parties to the United Nations Framework Convention on Climate Change, hereinafter referred to as “the Convention”,<br /><br />
+						Pursuant to the Durban Platform for Enhanced Action established by decision 1/CP.17 of the Conference of the Parties to the Convention at its seventeenth session,<br /><br />
+						In pursuit of the objective of the Convention, and being guided by its principles, including the principle of equity and common but differentiated responsibilities and respective capabilities, in the light of different national circumstances,<br /><br />
+						Recognizing the need for an effective and progressive response to the urgent threat of climate change on the basis of the best available scientific knowledge,<br /><br />
+						Also recognizing the specific needs and special circumstances of developing country Parties, especially those that are particularly vulnerable to the adverse effects of climate change, as provided for in the Convention,<br /><br />
+						Taking full account of the specific needs and special situations of the least developed countries with regard to funding and transfer of technology,
+						Recognizing that Parties may be affected not only by climate change, but also by the impacts of the measures taken in response to it,<br /><br />
+						Emphasizing the intrinsic relationship that climate change actions, responses and impacts have with equitable access to sustainable development and eradication of poverty,<br /><br />
+						Recognizing the fundamental priority of safeguarding food security and ending hunger, and the particular vulnerabilities of food production systems to the adverse impacts of climate change,<br /><br />
+						Taking into account the imperatives of a just transition of the workforce and the creation of decent work and quality jobs in accordance with nationally defined development priorities,<br /><br />
+						Acknowledging that climate change is a common concern of humankind, Parties should, when taking action to address climate change, respect, promote and consider their respective obligations on human rights, the right to health, the rights of indigenous peoples, local communities, migrants, children, persons with disabilities and people in vulnerable situations and the right to development, as well as gender equality, empowerment of women and intergenerational equity,<br /><br />
+						Recognizing the importance of the conservation and enhancement, as appropriate, of sinks and reservoirs of the greenhouse gases referred to in the Convention,
+						Noting the importance of ensuring the integrity of all ecosystems, including oceans, and the protection of biodiversity, recognized by some cultures as Mother Earth, and noting the importance for some of the concept of “climate justice”, when taking action to address climate change,<br /><br />
+						Affirming the importance of education, training, public awareness, public participation, public access to information and cooperation at all levels on the matters addressed in this Agreement,<br /><br />
+						Recognizing the importance of the engagements of all levels of government and various actors, in accordance with respective national legislations of Parties, in addressing climate change,<br /><br />
+						Also recognizing that sustainable lifestyles and sustainable patterns of consumption and production, with developed country Parties taking the lead, play an important role in addressing climate change,
+						<br /><br />
+						Have agreed as follows:
+						<br /><br />
+
+<b>Article 1</b><br />
+For the purpose of this Agreement, the definitions contained in Article 1 of the Convention shall apply. In addition:
+<br />1. “Convention” means the United Nations Framework Convention on Climate Change, adopted in New York on 9 May 1992.<br />
+2. “Conference of the Parties” means the Conference of the Parties to the Convention.<br />
+3. “Party” means a Party to this Agreement.
+<br /><br /><b>Article 2</b><br />
+1. This Agreement, in enhancing the implementation of the Convention, including its objective, aims to strengthen the global response to the threat of climate change, in the context of sustainable development and efforts to eradicate poverty, including by:
+(a) Holding the increase in the global average temperature to well below 2 °C above pre-industrial levels and to pursue efforts to limit the temperature increase to 1.5 °C above pre-industrial levels, recognizing that this would significantly reduce the risks and impacts of climate change;
+(b) Increasing the ability to adapt to the adverse impacts of climate change and foster climate resilience and low greenhouse gas emissions development, in a manner that does not threaten food production;
+(c) Making finance flows consistent with a pathway towards low greenhouse gas emissions and climate-resilient development.
+<br />2. This Agreement will be implemented to reflect equity and the principle of common but differentiated responsibilities and respective capabilities, in the light of different national circumstances.
+<br /><br /><b>Article 3</b><br />
+As nationally determined contributions to the global response to climate change, all Parties are to undertake and communicate ambitious efforts as defined in Articles 4, 7, 9, 10, 11 and 13 with the view to achieving the purpose of this Agreement as set out in Article 2. The efforts of all Parties will represent a progression over time, while recognizing the need to support developing country Parties for the effective implementation of this Agreement.
+<br /><br /><b>Article 4</b><br />
+1. In order to achieve the long-term temperature goal set out in Article 2, Parties aim to reach global peaking of greenhouse gas emissions as soon as possible, recognizing that peaking will take longer for developing country Parties, and to undertake rapid reductions thereafter in accordance with best available science, so as to achieve a balance between anthropogenic emissions by sources and removals by sinks of greenhouse gases in the second half of this century, on the basis of equity, and in the context of sustainable development and efforts to eradicate poverty.
+<br />2. Each Party shall prepare, communicate and maintain successive nationally determined contributions that it intends to achieve. Parties shall pursue domestic mitigation measures with the aim of achieving the objectives of such contributions.
+<br />3. Each Party’s successive nationally determined contribution will represent a progression beyond the Party’s then current nationally determined contribution and reflect its highest possible ambition, reflecting its common but differentiated responsibilities and respective capabilities, in the light of different national circumstances.
+<br />4. Developed country Parties shall continue taking the lead by undertaking economy-wide absolute emission reduction targets. Developing country Parties should continue enhancing their mitigation efforts, and are encouraged to move over time towards economy-wide emission reduction or limitation targets in the light of different national circumstances.
+<br />5. Support shall be provided to developing country Parties for the implementation of this Article, in accordance with Articles 9, 10 and 11, recognizing that enhanced support for developing country Parties will allow for higher ambition in their actions.
+<br />6. The least developed countries and small island developing States may prepare and communicate strategies, plans and actions for low greenhouse gas emissions development reflecting their special circumstances.
+<br />7. Mitigation co-benefits resulting from Parties’ adaptation actions and/or economic diversification plans can contribute to mitigation outcomes under this Article.
+<br />8. In communicating their nationally determined contributions, all Parties shall provide the information necessary for clarity, transparency and understanding in accordance with decision 1/CP.21 and any relevant decisions of the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement.
+<br />9. Each Party shall communicate a nationally determined contribution every five years in accordance with decision 1/CP.21 and any relevant decisions of the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement and be informed by the outcomes of the global stocktake referred to in Article 14.
+<br />10. The Conference of the Parties serving as the meeting of the Parties to the Paris Agreement shall consider common time frames for nationally determined contributions at its first session.
+<br />11. A Party may at any time adjust its existing nationally determined contribution with a view to enhancing its level of ambition, in accordance with guidance adopted by the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement.
+<br />12. Nationally determined contributions communicated by Parties shall be recorded in a public registry maintained by the secretariat.
+<br />13. Parties shall account for their nationally determined contributions. In accounting for anthropogenic emissions and removals corresponding to their nationally determined contributions, Parties shall promote environmental integrity, transparency, accuracy, completeness, comparability and consistency, and ensure the avoidance of double counting, in accordance with guidance adopted by the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement.
+<br />14. In the context of their nationally determined contributions, when recognizing and implementing mitigation actions with respect to anthropogenic emissions and removals, Parties should take into account, as appropriate, existing methods and guidance under the Convention, in the light of the provisions of paragraph 13 of this Article.
+<br />15. Parties shall take into consideration in the implementation of this Agreement the concerns of Parties with economies most affected by the impacts of response measures, particularly developing country Parties.
+<br />16. Parties, including regional economic integration organizations and their member States, that have reached an agreement to act jointly under paragraph 2 of this Article shall notify the secretariat of the terms of that agreement, including the emission level allocated to each Party within the relevant time period, when they communicate their nationally determined contributions. The secretariat shall in turn inform the Parties and signatories to the Convention of the terms of that agreement.
+<br />17. Each party to such an agreement shall be responsible for its emission level as set out in the agreement referred to in paragraph 16 above in accordance with paragraphs 13 and 14 of this Article and Articles 13 and 15.
+<br />18. If Parties acting jointly do so in the framework of, and together with, a regional economic integration organization which is itself a Party to this Agreement, each member State of that regional economic integration organization individually, and together with the regional economic integration organization, shall be responsible for its emission level as set out in the agreement communicated under paragraph 16 of this Article in accordance with paragraphs 13 and 14 of this Article and Articles 13 and 15.
+<br />19. All Parties should strive to formulate and communicate long-term low greenhouse gas emission development strategies, mindful of Article 2 taking into account their common but differentiated responsibilities and respective capabilities, in the light of different national circumstances.
+<br /><br /><b>Article 5</b><br />
+1. Parties should take action to conserve and enhance, as appropriate, sinks and reservoirs of greenhouse gases as referred to in Article 4, paragraph 1(d), of the Convention, including forests.
+<br />2. Parties are encouraged to take action to implement and support, including through results-based payments, the existing framework as set out in related guidance and decisions already agreed under the Convention for: policy approaches and positive incentives for activities relating to reducing emissions from deforestation and forest degradation, and the role of conservation, sustainable management of forests and enhancement of forest carbon stocks in developing countries; and alternative policy approaches, such as joint mitigation and adaptation approaches for the integral and sustainable management of forests, while reaffirming the importance of incentivizing, as appropriate, non-carbon benefits associated with such approaches.
+<br /><br /><b>Article 6</b><br />
+1. Parties recognize that some Parties choose to pursue voluntary cooperation in the implementation of their nationally determined contributions to allow for higher ambition in their mitigation and adaptation actions and to promote sustainable development and environmental integrity.
+<br />2. Parties shall, where engaging on a voluntary basis in cooperative approaches that involve the use of internationally transferred mitigation outcomes towards nationally determined contributions, promote sustainable development and ensure environmental integrity and transparency, including in governance, and shall apply robust accounting to ensure, inter alia, the avoidance of double counting, consistent with guidance adopted by the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement.
+<br />3. The use of internationally transferred mitigation outcomes to achieve nationally determined contributions under this Agreement shall be voluntary and authorized by participating Parties.
+<br />4. A mechanism to contribute to the mitigation of greenhouse gas emissions and support sustainable development is hereby established under the authority and guidance of the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement for use by Parties on a voluntary basis. It shall be supervised by a body designated by the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement, and shall aim:
+(a) To promote the mitigation of greenhouse gas emissions while fostering sustainable development;
+(b) To incentivize and facilitate participation in the mitigation of greenhouse gas emissions by public and private entities authorized by a Party;
+(c) To contribute to the reduction of emission levels in the host Party, which will benefit from mitigation activities resulting in emission reductions that can also be used by another Party to fulfil its nationally determined contribution; and
+(d) To deliver an overall mitigation in global emissions.
+<br />5. Emission reductions resulting from the mechanism referred to in paragraph 4 of this Article shall not be used to demonstrate achievement of the host Party’s nationally determined contribution if used by another Party to demonstrate achievement of its nationally determined contribution.
+<br />6. The Conference of the Parties serving as the meeting of the Parties to the Paris Agreement shall ensure that a share of the proceeds from activities under the mechanism referred to in paragraph 4 of this Article is used to cover administrative expenses as well as to assist developing country Parties that are particularly vulnerable to the adverse effects of climate change to meet the costs of adaptation.
+<br />7. The Conference of the Parties serving as the meeting of the Parties to the Paris Agreement shall adopt rules, modalities and procedures for the mechanism referred to in paragraph 4 of this Article at its first session.
+<br />8. Parties recognize the importance of integrated, holistic and balanced non-market approaches being available to Parties to assist in the implementation of their nationally determined contributions, in the context of sustainable development and poverty eradication, in a coordinated and effective manner, including through, inter alia, mitigation, adaptation, finance, technology transfer and capacity-building, as appropriate. These approaches shall aim to: (a) Promote mitigation and adaptation ambition;
+(b) Enhance public and private participation in the implementation of nationally determined contributions; and
+(c) Enable opportunities for coordination across instruments and relevant institutional arrangements.
+<br />9. A framework for non-market approaches to sustainable development is hereby defined to promote the non-market approaches referred to in paragraph 8 of this Article.
+
+<br /><br /><b>Article 7</b><br />
+1. Parties hereby establish the global goal on adaptation of enhancing adaptive capacity, strengthening resilience and reducing vulnerability to climate change, with a view to contributing to sustainable development and ensuring an adequate adaptation response in the context of the temperature goal referred to in Article 2.
+<br />2. Parties recognize that adaptation is a global challenge faced by all with local, subnational, national, regional and international dimensions, and that it is a key component of and makes a contribution to the long-term global response to climate change to protect people, livelihoods and ecosystems, taking into account the urgent and immediate needs of those developing country Parties that are particularly vulnerable to the adverse effects of climate change.
+<br />3. The adaptation efforts of developing country Parties shall be recognized, in accordance with the modalities to be adopted by the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement at its first session.
+<br />4. Parties recognize that the current need for adaptation is significant and that greater levels of mitigation can reduce the need for additional adaptation efforts, and that greater adaptation needs can involve greater adaptation costs.
+<br />5. Parties acknowledge that adaptation action should follow a country-driven, gender-responsive, participatory and fully transparent approach, taking into consideration vulnerable groups, communities and ecosystems, and should be based on and guided by the best available science and, as appropriate, traditional knowledge, knowledge of indigenous peoples and local knowledge systems, with a view to integrating adaptation into relevant socioeconomic and environmental policies and actions, where appropriate.
+<br />6. Parties recognize the importance of support for and international cooperation on adaptation efforts and the importance of taking into account the needs of developing country Parties, especially those that are particularly vulnerable to the adverse effects of climate change.
+<br />7. Parties should strengthen their cooperation on enhancing action on adaptation, taking into account the Cancun Adaptation Framework, including with regard to:
+(a) Sharing information, good practices, experiences and lessons learned, including, as appropriate, as these relate to science, planning, policies and implementation in relation to adaptation actions;
+(b) Strengthening institutional arrangements, including those under the Convention that serve this Agreement, to support the synthesis of relevant information and knowledge, and the provision of technical support and guidance to Parties;
+(c) Strengthening scientific knowledge on climate, including research, systematic observation of the climate system and early warning systems, in a manner that informs climate services and supports decision-making;
+(d) Assisting developing country Parties in identifying effective adaptation practices, adaptation needs, priorities, support provided and received for adaptation actions and efforts, and challenges and gaps, in a manner consistent with encouraging good practices;
+(e) Improving the effectiveness and durability of adaptation actions.
+<br />8. United Nations specialized organizations and agencies are encouraged to support the efforts of Parties to implement the actions referred to in paragraph 7 of this Article, taking into account the provisions of paragraph 5 of this Article.
+<br />9. Each Party shall, as appropriate, engage in adaptation planning processes and the implementation of actions, including the development or enhancement of relevant plans, policies and/or contributions, which may include:
+(a) The implementation of adaptation actions, undertakings and/or efforts;
+(b) The process to formulate and implement national adaptation plans;
+(c) The assessment of climate change impacts and vulnerability, with a view to formulating nationally determined prioritized actions, taking into account vulnerable people, places and ecosystems;
+(d) Monitoring and evaluating and learning from adaptation plans, policies, programmes and actions; and
+(e) Building the resilience of socioeconomic and ecological systems, including through economic diversification and sustainable management of natural resources.
+<br />10. Each Party should, as appropriate, submit and update periodically an adaptation communication, which may include its priorities, implementation and support needs, plans and actions, without creating any additional burden for developing country Parties.
+<br />11. The adaptation communication referred to in paragraph 10 of this Article shall be, as appropriate, submitted and updated periodically, as a component of or in conjunction with other communications or documents, including a national adaptation plan, a nationally determined contribution as referred to in Article 4, paragraph 2, and/or a national communication.
+<br />12. The adaptation communications referred to in paragraph 10 of this Article shall be recorded in a public registry maintained by the secretariat.
+<br />13. Continuous and enhanced international support shall be provided to developing country Parties for the implementation of paragraphs 7, 9, 10 and 11 of this Article, in accordance with the provisions of Articles 9, 10 and 11.
+<br />14. The global stocktake referred to in Article 14 shall, inter alia:
+(a) Recognize adaptation efforts of developing country Parties;
+(b) Enhance the implementation of adaptation action taking into account the adaptation communication referred to in paragraph 10 of this Article;
+(c) Review the adequacy and effectiveness of adaptation and support provided for adaptation; and
+(d) Review the overall progress made in achieving the global goal on adaptation referred to in paragraph 1 of this Article.
+
+<br /><br /><b>Article 8</b><br />
+1. Parties recognize the importance of averting, minimizing and addressing loss and damage associated with the adverse effects of climate change, including extreme weather events and slow onset events, and the role of sustainable development in reducing the risk of loss and damage.
+<br />2. The Warsaw International Mechanism for Loss and Damage associated with Climate Change Impacts shall be subject to the authority and guidance of the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement and may be enhanced and strengthened, as determined by the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement.
+<br />3. Parties should enhance understanding, action and support, including through the Warsaw International Mechanism, as appropriate, on a cooperative and facilitative basis with respect to loss and damage associated with the adverse effects of climate change.
+<br />4. Accordingly, areas of cooperation and facilitation to enhance understanding, action and support may include:
+(a) Early warning systems;
+(b) Emergency preparedness;
+(c) Slow onset events;
+(d) Events that may involve irreversible and permanent loss and damage;
+(e) Comprehensive risk assessment and management;
+(f) Risk insurance facilities, climate risk pooling and other insurance solutions;
+(g) Non-economic losses;
+(h) Resilience of communities, livelihoods and ecosystems.
+<br />5. The Warsaw International Mechanism shall collaborate with existing bodies and expert groups under the Agreement, as well as relevant organizations and expert bodies outside the Agreement.
+
+
+<br /><br /><b>Article 9</b><br />
+1. Developed country Parties shall provide financial resources to assist developing country Parties with respect to both mitigation and adaptation in continuation of their existing obligations under the Convention.
+<br />2. Other Parties are encouraged to provide or continue to provide such support voluntarily.
+<br />3. As part of a global effort, developed country Parties should continue to take the lead in mobilizing climate finance from a wide variety of sources, instruments and channels, noting the significant role of public funds, 26
+through a variety of actions, including supporting country-driven strategies, and taking into account the needs and priorities of developing country Parties. Such mobilization of climate finance should represent a progression beyond previous efforts.
+<br />4. The provision of scaled-up financial resources should aim to achieve a balance between adaptation and mitigation, taking into account country-driven strategies, and the priorities and needs of developing country Parties, especially those that are particularly vulnerable to the adverse effects of climate change and have significant capacity constraints, such as the least developed countries and small island developing States, considering the need for public and grant-based resources for adaptation.
+<br />5. Developed country Parties shall biennially communicate indicative quantitative and qualitative information related to paragraphs 1 and 3 of this Article, as applicable, including, as available, projected levels of public financial resources to be provided to developing country Parties. Other Parties providing resources are encouraged to communicate biennially such information on a voluntary basis.
+<br />6. The global stocktake referred to in Article 14 shall take into account the relevant information provided by developed country Parties and/or Agreement bodies on efforts related to climate finance.
+<br />7. Developed country Parties shall provide transparent and consistent information on support for developing country Parties provided and mobilized through public interventions biennially in accordance with the modalities, procedures and guidelines to be adopted by the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement, at its first session, as stipulated in Article 13, paragraph 13. Other Parties are encouraged to do so.
+<br />8. The Financial Mechanism of the Convention, including its operating entities, shall serve as the financial mechanism of this Agreement.
+<br />9. The institutions serving this Agreement, including the operating entities of the Financial Mechanism of the Convention, shall aim to ensure efficient access to financial resources through simplified approval procedures and enhanced readiness support for developing country Parties, in particular for the least developed countries and small island developing States, in the context of their national climate strategies and plans.
+<br /><br /><b>Article 10</b><br />
+1. Parties share a long-term vision on the importance of fully realizing technology development and transfer in order to improve resilience to climate change and to reduce greenhouse gas emissions.
+<br />2. Parties, noting the importance of technology for the implementation of mitigation and adaptation actions under this Agreement and recognizing existing technology deployment and dissemination efforts, shall strengthen cooperative action on technology development and transfer.
+<br />3. The Technology Mechanism established under the Convention shall serve this Agreement.
+<br />4. A technology framework is hereby established to provide overarching guidance for the work of the Technology Mechanism in promoting and facilitating enhanced action on technology development and transfer in order to support the implementation of this Agreement, in pursuit of the long-term vision referred to in paragraph 1 of this Article.
+<br />5. Accelerating, encouraging and enabling innovation is critical for an effective, long-term global response to climate change and promoting economic growth and sustainable development. Such effort shall be, as appropriate, supported, including by the Technology Mechanism and, through financial means, by the Financial Mechanism of the Convention, for collaborative approaches to research and development, and facilitating access to technology, in particular for early stages of the technology cycle, to developing country Parties.
+<br />6. Support, including financial support, shall be provided to developing country Parties for the implementation of this Article, including for strengthening cooperative action on technology development and transfer at different stages of the technology cycle, with a view to achieving a balance between support for mitigation and adaptation. The global stocktake referred to in Article 14 shall take into account available information on efforts related to support on technology development and transfer for developing country Parties.
+
+<br /><br /><b>Article 11</b><br />
+1. Capacity-building under this Agreement should enhance the capacity and ability of developing country Parties, in particular countries with the least capacity, such as the least developed countries, and those that are particularly vulnerable to the adverse effects of climate change, such as small island developing States, to take effective climate change action, including, inter alia, to implement adaptation and mitigation actions, and should facilitate technology development, dissemination and deployment, access to climate finance, relevant aspects of education, training and public awareness, and the transparent, timely and accurate communication of information.
+<br />2. Capacity-building should be country-driven, based on and responsive to national needs, and foster country ownership of Parties, in particular, for developing country Parties, including at the national, subnational and local levels. Capacity-building should be guided by lessons learned, including those from capacity-building activities under the Convention, and should be an effective, iterative process that is participatory, cross-cutting and gender-responsive.
+<br />3. All Parties should cooperate to enhance the capacity of developing country Parties to implement this Agreement. Developed country Parties should enhance support for capacity-building actions in developing country Parties.
+<br />4. All Parties enhancing the capacity of developing country Parties to implement this Agreement, including through regional, bilateral and multilateral approaches, shall regularly communicate on these actions or measures on capacity-building. Developing country Parties should regularly communicate progress made on implementing capacity-building plans, policies, actions or measures to implement this Agreement.
+<br />5. Capacity-building activities shall be enhanced through appropriate institutional arrangements to support the implementation of this Agreement, including the appropriate institutional arrangements established under the Convention that serve this Agreement. The Conference of the Parties serving as the meeting of the Parties to the Paris Agreement shall, at its first session, consider and adopt a decision on the initial institutional arrangements for capacity-building.
+
+<br /><br /><b>Article 12</b><br />
+Parties shall cooperate in taking measures, as appropriate, to enhance climate change education, training, public awareness, public participation and public access to information, recognizing the importance of these steps with respect to enhancing actions under this Agreement.
+<br /><br /><b>Article 13</b><br />
+1. In order to build mutual trust and confidence and to promote effective implementation, an enhanced transparency framework for action and support, with built-in flexibility which takes into account Parties’ different capacities and builds upon collective experience is hereby established.
+<br />2. The transparency framework shall provide flexibility in the implementation of the provisions of this Article to those developing country Parties that need it in the light of their capacities. The modalities, procedures and guidelines referred to in paragraph 13 of this Article shall reflect such flexibility.
+<br />3. The transparency framework shall build on and enhance the transparency arrangements under the Convention, recognizing the special circumstances of the least developed countries and small island developing States, and be implemented in a facilitative, non-intrusive, non-punitive manner, respectful of national sovereignty, and avoid placing undue burden on Parties.
+<br />4. The transparency arrangements under the Convention, including national communications, biennial reports and biennial update reports, international assessment and review and international consultation and analysis, shall form part of the experience drawn upon for the development of the modalities, procedures and guidelines under paragraph 13 of this Article.
+<br />5. The purpose of the framework for transparency of action is to provide a clear understanding of climate change action in the light of the objective of the Convention as set out in its Article 2, including clarity and tracking of progress towards achieving Parties’ individual nationally determined contributions under Article 4, and Parties’ adaptation actions under Article 7, including good practices, priorities, needs and gaps, to inform the global stocktake under Article 14.
+<br />6. The purpose of the framework for transparency of support is to provide clarity on support provided and received by relevant individual Parties in the context of climate change actions under Articles 4, 7, 9, 10 and 11, and, to the extent possible, to provide a full overview of aggregate financial support provided, to inform the global stocktake under Article 14.
+<br />7. Each Party shall regularly provide the following information: (a) A national inventory report of anthropogenic emissions by sources and removals by sinks of greenhouse gases, prepared using good practice methodologies accepted by the Intergovernmental Panel on Climate Change and agreed upon by the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement;
+(b) Information necessary to track progress made in implementing and achieving its nationally determined contribution under Article 4.
+<br />8. Each Party should also provide information related to climate change impacts and adaptation under Article 7, as appropriate.
+<br />9. Developed country Parties shall, and other Parties that provide support should, provide information on financial, technology transfer and capacity-building support provided to developing country Parties under Article 9, 10 and 11.
+<br />10. Developing country Parties should provide information on financial, technology transfer and capacity-building support needed and received under Articles 9, 10 and 11.
+<br />11. Information submitted by each Party under paragraphs 7 and 9 of this Article shall undergo a technical expert review, in accordance with decision 1/CP.21. For those developing country Parties that need it in the light of their capacities, the review process shall include assistance in identifying capacity-building needs. In addition, each Party shall participate in a facilitative, multilateral consideration of progress with respect to efforts under Article 9, and its respective implementation and achievement of its nationally determined contribution.
+<br />12. The technical expert review under this paragraph shall consist of a consideration of the Party’s support provided, as relevant, and its implementation and achievement of its nationally determined contribution. The review shall also identify areas of improvement for the Party, and include a review of the consistency of the information with the modalities, procedures and guidelines referred to in paragraph 13 of this Article, taking into account the flexibility accorded to the Party under paragraph 2 of this Article. The review shall pay particular attention to the respective national capabilities and circumstances of developing country Parties.
+<br />13. The Conference of the Parties serving as the meeting of the Parties to the Paris Agreement shall, at its first session, building on experience from the arrangements related to transparency under the Convention, and elaborating on the provisions in this Article, adopt common modalities, procedures and guidelines, as appropriate, for the transparency of action and support.
+<br />14. Support shall be provided to developing countries for the implementation of this Article.
+<br />15. Support shall also be provided for the building of transparency-related capacity of developing country Parties on a continuous basis.
+
+<br /><br /><b>Article 14</b><br />
+1. The Conference of the Parties serving as the meeting of the Parties to the Paris Agreement shall periodically take stock of the implementation of this Agreement to assess the collective progress towards achieving the purpose of this Agreement and its long-term goals (referred to as the “global stocktake”). It shall do so in a comprehensive and facilitative manner, considering mitigation, adaptation and the means of implementation and support, and in the light of equity and the best available science.
+<br />2. The Conference of the Parties serving as the meeting of the Parties to the Paris Agreement shall undertake its first global stocktake in 2023 and every five years thereafter unless otherwise decided by the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement.
+<br />3. The outcome of the global stocktake shall inform Parties in updating and enhancing, in a nationally determined manner, their actions and support in accordance with the relevant provisions of this Agreement, as well as in enhancing international cooperation for climate action.
+<br /><br /><b>Article 15</b><br />
+1. A mechanism to facilitate implementation of and promote compliance with the provisions of this Agreement is hereby established.
+<br />2. The mechanism referred to in paragraph 1 of this Article shall consist of a committee that shall be expert-based and facilitative in nature and function in a manner that is transparent, non-adversarial and non-punitive. The committee shall pay particular attention to the respective national capabilities and circumstances of Parties.
+<br />3. The committee shall operate under the modalities and procedures adopted by the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement at its first session and report annually to the Conference of the Parties serving as the meeting of the Parties to the Paris Agreement.
+
+				
+				
+			</div> <!-- kolom rechts -->
+				
+			</div> <!-- einde row -->
+
+
+			<div class='row'>
+
+				<div class='col-sm-6'>
+
+
+
+
+				<div class='tekstvak Eco coin / Meat the future'>
+
+				<a id='eco-coin-meat-the-future'></a>
+			
+				<div class='kop kop1'> <b>&nbsp;&nbsp;&nbsp;&nbsp;Eco Coin / Meat The Future</b> </div>
+
+				<div class='kop kop2'><span class='hidden'> - Eco coin / Meat the future </span>						<br />
+						<b> Next Nature Network </b></div>
+				<p><i>“Next Nature Network is een nieuwe natuurorganisatie die niet terug, maar vooruit wil naar de natuur. We willen weg van het romantische beeld van een paradijselijke natuur die beter was voordat de mens verscheen. De mens is onderdeel van de natuur. Evolutie gaat door en natuur verandert met ons mee. We willen technologie inzetten voor een natuurlijkere wereld. Want uiteindelijk moeten we misschien niet alleen de panda, maar ook de mens redden.”</i></p>
+
+				<p>Het doel van Next Nature Netwerk is om ervoor zorgen dat ook de mens van morgen een leefbaar bestaan heeft. Dit doen ze door middel van opmerkelijke projecten die ‘een pad naar de toekomst’ uit zetten die wenselijk is voor de mensheid én voor de aarde als geheel. Koert van Mensvoort, kunstenaar, filosoof en oprichter van Next Nature Network, ziet de mens als belangrijke factor in de natuur en niet alleen maar als een barbaars volk dat natuur kapot maakt. <i>“De aanwezigheid van de mens transformeert de planeet; er komt een technosfeer bovenop de biosfeer. Ik denk dat systemen anders bezien moeten worden. We moeten naar natuur kijken als een dynamisch geheel. Dat moeten we omarmen en dan moeten we een pad gaan zoeken naar de toekomst. Er bestaan al veel natuurbewegingen en ze doen veel goede dingen, maar hun beeld van de natuur is statisch en conservatief. Daarom is Next Nature Network nodig.”</i></p>
+
+
+
+				</div> <!-- tekstvak -->
+
+
+				</div> <!-- kolom links -->
+
+				<div class='col-sm-6 titel-klein'>
+					
+
+
+
+
+
+
+					
+
+				</div> <!-- kolom rechts -->
+				
+			</div> <!-- einde row -->
+
+
+			<div class='row'>
+
+				<div class='col-sm-6'>
+
+
+				<div class='tekstvak'>
+
+
+
+				<div class='kop kop2'><span class='hidden'> - Eco coin / Meat the future </span><b> Eco Coin </b></div>
+				<p>Recentelijk heeft Next Nature Network het initiatief ECO coin opgezet. Een ECO coin drukt de waarde van natuur uit. Net als andere munteenheden, zoals de Dollar en de Euro, heeft de ECO coin een wisselkoers die meebeweegt met de noodzaak om kwetsbare ecologieën – zoals het regenwoud of het koraalrif – te beschermen. Regenwouden en koraalriffen zijn van onschatbare waarde. Toch laten we koraalriffen sterven en is er de laatste tien jaar 1,5 miljoen vierkante kilometer bos verdwenen. Dat staat ongeveer gelijk aan de grootte van Alaska. Het doel van de ECO coin is om deze ecologieën te beschermen en bijvoorbeeld boeren economisch te compenseren om het regenwoud te behouden. <i>“Als we milieuproblemen zoals ontbossing, verlaagde biodiversiteit en klimaatverandering willen aanpakken, moeten we ecologisch gerelateerde waarde uitdrukken in economische termen. Boeren in het regenwoud staan voor de keus: kap ik het bos en ga ik soja verbouwen, zodat er geld in het laatje komt? Of laat ik de bomen staan, maar verdien ik niks. Een vreselijk dilemma. Maar wat nou… als we een speciale ECO-munt hadden, waarmee je geld verdient met ecologische producten? Dan verdienen de mensen die het regenwoud behouden ECO’s waarmee ze hun families kunnen voeden. Zo brengen we economie en ecologie in balans.”</i></p>
+
+				<p>ECO coin is dus een logisch stelsel waarmee je geld kunt verdienen ten behoeve van de natuur. Het idee is simpel: als je iets goed doet voor het milieu verdien je ECO coins. Dus in plaats van geld betalen voor het kappen van het regenwoud voor de aanleg van sojavelden, worden mensen die het regenwoud helpen behouden en nieuwe bomen aanplanten beloond. De vraag die deze munt zou moeten oproepen is: ‘zou het regenwoud ook gekapt worden als we mensen zouden kunnen betalen om de bomen te laten staan?’ Van Mensvoort: <i>“De natuur zal gaan profiteren van deze munt want het wordt voor mensen financieel interessant om waarde aan de natuur toe te voegen. En ook al klinkt het nu misschien nog abstract, Eco Coin is geen ideologisch project, maar een project dat zich richt op het verbinden van ecologie en economie.”</i> </p>
+
+				<p>Tijdens de Dutch Design Week in 2015 is de eerste ECO coin uitgereikt. Initiatiefnemer Koert van Mensvoort reikte de munt uit aan Yoyo Yogasmana van project Age of Wonderland. (Voor zijn werk in Indonesië voor het behoud van meer dan 130 rijstsoorten zonder enig gebruik van insecticiden.) Dit evenement was tegelijkertijd de introductie van de ECO coin. Een slimme zet, want de Dutch Design Week is internationaal een belangrijke happening en er is altijd veel pers aanwezig. Omdat het project in de kinderschoenen staat, is er in de media nog niet veel over geschreven. De invloed van dit initiatief zal nog duidelijk worden. Het komende jaar zal het project verder uitgebreid en uitgewerkt worden. Vooralsnog bestaat het project uit een ontwerp voor de munt, een introducerend campagne filmpje en verschillende presentaties door Koert van Mensvoort voor bijvoorbeeld TED-x. </p>
+				
+				<p>We lijken ons niet te beseffen dat de natuur van onschatbare waarde is voor de mensheid. Haar (economische) waarde wordt onderschat en niet uitgedrukt in valuta. Door middel van een serieuze munteenheid wordt deze waarde gespecificeerd. Het idee om economische waarde aan iets te geven wat heel kostbaar is, vind ik als strategie best slim. Ook de ‘beloningsstrategie’ - hoe simpel ook - is slim omdat aangetoond is dat dit gewoonweg werkt. ECO coin is een intelligent en doordacht project maar wel een tikkeltje ambitieus. Er zal serieus onderzoek nodig zijn naar de voor- en nadelen, en eventuele bedreigingen. Desalniettemin lijkt het me (conceptueel wellicht op een iets laagdrempeliger niveau) bijzonder bruikbaar voor organisaties die in duurzaamheid investeren zoals een bank als ASN.  </p>
+
+
+				</div> <!-- tekstvak -->
+
+
+				</div> <!-- kolom links -->
+
+				<div class='col-sm-6'>
+
+					<img src='images/ecocoin1.jpg' class='img-responsive' />
+
+			
+
+				</div> <!-- kolom rechts -->
+				
+			</div> <!-- einde row -->
+
+
+			<div class='row'>
+
+				<div class='col-sm-6'>
+
+				<div class='tekstvak'>
+				
+				<div class='kop kop2'><span class='hidden'> - Eco coin / Meat the future </span><b> Meat the Future </b></div>
+				<p>Vleesconsumptie heeft destructieve gevolgen voor onze planeet en nu de wereldbevolking groeit naar 9 miljard mensen in 2050, wordt het werkelijk onhoudbaar vlees te blijven produceren en consumeren zoals we dat nu doen. Wetenschappers verwachten dat kweekvlees een duurzaam en diervriendelijk alternatief kan zijn voor het vlees van vandaag. Kweekvlees wordt geproduceerd door dierlijke cellen in een bioreactor op te kweken tot een stukje vlees. De eerste in het lab gegroeide hamburger is inmiddels al gebakken, maar Next Nature Netwerk denkt dat kweekvlees ons ook een totaal nieuwe eetcultuur kan brengen. Ze brachten in 2014 het prijswinnende ‘Kweekvlees Kookboek’ uit waarin 45 recepten staan die in de toekomst mogelijk op ons bord belanden. De recepten zijn prachtig geïllustreerd en worden aangevuld met interviews en essays van wetenschappers, activisten, filosofen en chef-koks. Naast het kookboek werd de website <i>Bistro In Vitro</i> gelanceerd. ‘Werelds eerste kweekvlees restaurant.’ Waar je een menu samen kan stellen, een reservering kunt maken en het kookboek kunt winnen.  </p>
+
+				<p>Gebruikmakend van een kookboek als storytelling medium, is het Kweekvlees Kookboek een visueel spectaculaire ervaring. De futuristische recepten zijn inhoudelijk nogal vreemd, maar door de stijlvolle illustraties en de deskundige informatie is het lezen van het boek bijzonder inspirerend. De titels hebben hetzelfde karakter: <i>Vleesverf, Dodo-Nuggets, Gebreide Steaks, Celebrity Cubes van Lady Gaga, Transparante Vleessushi, Vleesijsjes gemaakt van ijsbeer.</i> Bistro In Vitro gaat nog een stapje verder door filmpjes op de website te presenteren van bijzondere bewegende gerechten en uitgebreide interviews met Chef-koks en culinair recensenten.</p>
+				
+				<p> Meat The Future: Het Kweekvlees Kookboek en Bistro In Vitro zijn compleet fictief en daarom overduidelijk gemaakt om de discussie over de toekomst van vlees aan te jagen. De gerechten bieden nog geen realistisch alternatief voor het eten vlees maar dit project is wel de ultieme discussiestarter over de toekomst van vlees en dat lijkt me een goed begin voor eventuele veranderingen in ons eetpatroon. Next Nature Netwerk zet twee soorten media in om dit doel te bereiken. En hoewel kweekvlees nog lang geen realiteit is, wordt er in het kookboek en op de website door de ‘experts’ op z’on manier gesproken alsof het al láng normaal is. Hier ligt de kracht van dit project. Experts worden ingezet om dit toekomstige scenario geloofwaardig te maken. </p>
+				<p>Het kookboek - met een eerste oplage van 3000 - werd in 2014 uitgebracht, won hetzelfde jaar een Dutch Design Award en vervolgens schreven vrijwel alle invloedrijke Nederlandse kranten artikels over dit vernieuwende en verassende project. Tientallen forums, (nieuws)sites en design-blogs bediscussieerden het project en veel mensen, met name in de ‘design wereld’ kennen het inmiddels.</p>
+
+				<p>Dit relatief kleine project heeft zonder commerciële campagne strategie een grote indruk gemaakt. En dat komt volgens mij door het uitdagende en vernieuwende karakter ervan. Het is zó absurd, je moet het gewoon bespreken.</p>
+
+				<p>ECO coin en Meat the Future zijn beiden uitzonderlijke projecten. Next Nature Netwerk lijkt er steevast in te slagen conceptueel sterke, unieke, en zeer inspirerende projecten op te zetten. Op een intelligente en humoristische manier stellen ze grootschalige problemen aan de kaak. Waar ik zelf wel eens de neiging heb om cynisch te werk te gaan, weet NNN dit heel slim om te draaien in iets positiefs. Next Nature Netwerk maakt doormiddel van zeer exceptioneel werk mensen nieuwsgierig en is mede daarom succesvol.</p>
+
+			</div>
+
+
+				<div class='tekstvak the little book of shocking eco facts'>
+					<a id='little-book-of-shocking-eco-facts'></a>
+				<div class='kop kop1'> <b>&nbsp;&nbsp;&nbsp;&nbsp;The Little Book of Shocking Eco Facts</b></div>
+						<br />
+					
+				<div class='kop kop2'><span class='hidden'> - The Little Book of Shocking Eco Facts </span><b> Jonathan Barnbrook </b></div>
+				<p> Ontwerper, typograaf en illustrator Jonathan Barnbrook is een van de meest bekende grafisch ontwerpers in Groot-Brittannië. In zijn werk maakt hij sterke statements over kapitalisme, consumentisme en politiek. Zijn linkse politieke boodschappen zorgen ervoor dat zijn werk een opponent van commercieel design is. Barnbrook:<i>“Designers, stay away from corporations that want you to lie for them” </i>Barnbrook zegt dat zijn werk een uiting van innerlijke woede op al het onrecht in de wereld is, en hij vindt dat ontwerp altijd maatschappelijk verantwoord moet zijn - niet decoratief of met als doel verkoop van onzinnige spullen. Hij gelooft dat grafisch ontwerp de wereld kan veranderen als het werk in handen van de juiste mensen komt en het op de politieke agenda komt te staan. Barnbrook:<i> “Design is both a political and cultural force for change, although most designers choose not to think about the power it has.” </i> Door ook bepaald commercieel werk te doen (meestal voor culturele instellingen), lukt het Barnbrook om een goedlopende studio te runnen en een deel van zijn (zelf geïnitieerde) activistische werk te financieren. Zelf zegt hij dit te moeten doen om te kunnen overleven. </p>
+
+
+
+
+				</div> <!-- tekstvak -->
+
+
+				</div> <!-- kolom links -->
+
+				<div class='col-sm-6'>
+					<img src='images/kookboek1.jpg' class='img-responsive' />
+				</div> <!-- kolom rechts -->
+				
+			</div> <!-- einde row -->
+
+
+			<div class='row'>
+
+				<div class='col-sm-6'>
+
+				<div class='tekstvak'>
+				
+				<p>Na het verschijnen van <i>The Little Book of Shocking Global Facts</i> en <i>The Little Book of Shocking Food Facts</i> bracht Barnbrook in 2011 in samenwerking met wetenschappers Mark Crundwell en Cameron Dunn <i>The Little Book of Shocking Eco Facts</i> uit. Een bijna 200 pagina’s tellend boek waarin grafische beelden gecombineerd worden met honderden schokkende feiten over urgente ecologische kwesties. Het is een onthullend boek over de milieu uitdagingen van onze tijd. Uiteenlopend van onze regenwouden en moerassen tot onze zeeën en oceanen, beschrijft dit boek uitgebreid op welke vlakken onze wereld wordt bedreigd. Barnbrook combineert zijn typografische vaardigheden met aangename kleurrijke illustraties om een ethische boodschap uit te dragen. Dit boek is een goed voorbeeld van Barnbrook’s bewonderenswaardige werk. Op een visueel spectaculaire manier gebruikt hij grafisch ontwerp om mondiale problemen aan de kaak te stellen. Net als veel ander werk van hem, heeft Eco Facts een duidelijke visie: door middel van een boeiende, inhoudelijke presentatie van feiten (data visualisatie), milieu-bewustzijn creëren met als doel om de onnodige vernietiging van onze planeet tegen te gaan. </p>
+				
+				<p> Zoals wel vaker in zijn werk, maakt Barnbrook in dit boek gebruik van een scherpe, onthullende shockeringsstrategie. Dit spreekt mij erg aan omdat de boodschap luid en duidelijk is. Bovendien houd ik wel van een niet zó voorzichtige aanpak. Je moet soms shockeren om aandacht te krijgen. Ook ben ik zelf nogal gevoelig voor ‘feitelijke waarheden’. Barnbrook maakt heel slim gebruik van wetenschappelijk onderbouwde data. Op de omslag van het boek staat vrij prominent met welke experts hij heeft samengewerkt. Als je door het boek bladert vliegen de getallen om je oren en is het ‘oh my god’-gevoel onvermijdelijk. Wat ik opmerkelijk vind - maar wat wel typerend voor Barnbrook is - is het grote contrast tussen de esthetische kleurrijke illustraties en de onaangename boodschap. Het is soms moeilijk te verteren dat iets wat in essentie weerzinwekkend is, er mooi uit ziet. </p>
+				
+				<p> Wat goed (en logisch) aan het boek is, is dat het op een zo milieuvriendelijk mogelijke manier geproduceerd is. Er is op FSC gecertificeerd papier gedrukt met soja-inkt (een milieuvriendelijk alternatief voor op aardolie gebaseerde traditionele inkt) en een deel van de winst wordt geschonken aan de Rainforest Alliance.</p>
+				
+				<p> Barnbrook is een gevierd grafisch ontwerper en daarom wordt Eco Facts op verschillende forums besproken en voorgedragen. De reviews van de pers zijn over het algemeen lovend en bovendien is Eco Facts een opvolger van twee eerder verschenen boeken uit deze serie. (Als deel 1 en 2 niet succesvol zouden zijn, zou er dan een deel 3 komen?) Maar omdat de oplage onbekend is, is de impact moeilijk te bepalen. Zelf is Barnbrook er over het algemeen van overtuigd dat zijn werk impact heeft. <i>“You have immense power because what you do is to mass produce messages with a meaning. That can start a revolution or it can indirectly help change society.”</i></p>
+				
+				<p> In Eco Facts presenteert Barnbrook bedroevende feiten. Hij is overduidelijk zeer kritisch - en dat is belangrijk - maar hij draagt geen alternatieven aan. Je zou kunnen stellen dat dit een volwassen manier van invloed uitoefenen is. Zelf ben ik een groot fan van zijn werk maar helaas confronteer ik mijzelf iets te vaak met de pijnlijke observatie dat het veranderen van menselijk gedrag alleen kans van slagen heeft als er iets tegenover staat. Zonder het aandragen van goede alternatieven zal er weinig veranderen vermoed ik. Barnbrook informeert de lezer met gegronde feiten, maar de manier van communiceren is eenzijdig. Deze methode vind ik zelf niet ideaal, omdat mensen het onprettig vinden om zich onzeker of aangevallen te voelen. We hebben dan de neiging om te denken dat deze informatie niet op ons van toepassing is. Maar Barnbrook zet in ieder geval een grote stap in de goede richting. Hij trekt de aandacht en informeert op een duidelijke en bedreven manier. Hij wakkert net als Next Nature Netwerk discussies aan, maar doet dit wel op een minder originele manier.</p>
+				
+
+				</div> <!-- tekstvak -->
+
+
+				</div> <!-- kolom links -->
+
+				<div class='col-sm-6 rechts'>
+
+					<img src='images/barnbrook.jpg' class='img-responsive' />
+
+						
+
+				</div> <!-- kolom rechts -->
+				
+			</div> <!-- einde row -->
+
+
+			<div class='row'>
+
+				<div class='col-sm-6'>
+
+
+
+				<div class='tekstvak at this rate'>
+					<a id='at-this-rate'></a>
+				<div class='kop kop1'> <b>&nbsp;&nbsp;&nbsp;&nbsp;At This Rate</b> </div>
+				<br />						<br />
+				<p>In opdracht van Rainforest Action Network ontwierp Matt Willey, een gerenommeerde grafisch ontwerper uit Groot-Brittannië, de publicatie <i>At This Rate</i> waarin wordt geprobeerd om bewustzijn te creëren voor de destructie van het Amazone regenwoud. Elke publicatie is gemaakt van 1 A1 vel FSC gecertificeerd papier en gevouwen tot een boekje van 12 pagina’s. Met aan de buitenzijde een poster die de titel ‘2060’ draagt en aan de binnenzijde feiten over de het Amazone regenwoud: <i>“Our rainforests are disappearing fast. Every second we lose an area the size of a football pitch. Every minute we lose an area 20 times the size of the Sydney Opera House. Every hour we lose an area the size of Central London. Every day we lose an area larger than all five boroughs of New York City. Every week we lose an area 21 times the size of Paris. Every month we lose an area 102 times the size of Barcelona. Every year we lose an area three times the size of Sri Lanka. At this rate half our remaining rainforests will be gone by 2025 and by 2060 there will be no remaining rainforests. If our rainforests are further destroyed, we will lose not only one of the world’s greatest treasures, but also our last best chance for the planet’s survival.”</i></p>
+				
+				<p>De dubbele functie van <i>At This Rate</i> werkt versterkend, en de vormgeving is spectaculair te noemen. Ondanks de heldere boodschap die dit boekje uitdraagt, bevat het - volledig dankzij de vormgeving en beeldtaal - een poëtische laag. Het is prachtig, met oog voor detail ontworpen en de tekst is inhoudelijk niet subtiel, maar ziet er wél zo uit. De illustraties zijn zeer esthetisch, zelfs een beetje dromerig. Op deze manier onderscheidt Matt Willey zich van het werk van Barnbrook en Next Nature Netwerk. Maar net als Barnbrook, gebruikt ook Matt Willey ‘mooie beelden’ voor het uitdragen van een niet z’on mooie boodschap. Ergens wringt dat toch. Het poëtische karakter spreekt erg aan, maar het beeld - dode bladeren die sierlijk en bijna lieflijk gevormd door het boek dwarrelen - dient het doel niet. Want om de boodschap van <i>At This Rate</i> uit te dragen is gekozen om een doemscenario te schetsen: ‘Als we zo door gaan, is in 2060 al ons regenwoud verdwenen.’ Het beeld versterkt deze boodschap niet. Bovendien kan ook een doemscenario wellicht wat creatiever van geest zijn. Humor is misschien ongepast, want een organisatie als Rainforest Action Network kan het zich niet veroorloven te bagatelliseren maar zolang er een duidelijke boodschap aanwezig is, had ook een fictief scenario ingezet kunnen worden als strategie. Wel moet opgemerkt worden dat dankzij de dromerige beeldtaal, de dreiging van de boodschap (zoals bij Barnbrook alom aanwezig) gematigd is. </p>
+				
+				<p> Over de oplagen van <i>At This Rate </i> is niets bekend. Sterker nog, op de website van Rainforest Action Network is over het bestaan überhaupt niets te vinden. Veel mensen zouden een mooi boekje als deze in de kast hebben willen staan, maar het is nergens te verkrijgen. Bij toeval kwam ik het tegen in een boek over datavisualisatie. Het is bekend dat de publicatie gefinancierd en geïnitieerd is door Rainforest Action Network, maar over de impact kan hoogstens gespeculeerd worden. Waarschijnlijk is het boekje bedoeld als geschenk voor donateurs, maar ook dit is slechts speculatie.</p>
+
+
+
+
+				</div> <!-- tekstvak -->
+
+
+				</div> <!-- kolom links -->
+
+				<div class='col-sm-6 rechts'>
+
+					<img src='images/atthisrate0.jpg' class='img-responsive' />
+
+
+				</div> <!-- kolom rechts -->
+				
+			</div> <!-- einde row -->
+
+
+			<div class='row'>
+
+				<div class='col-sm-6'>
+
+
+				<div class='tekstvak its not warming, its dying'>
+				<div class='kop kop1'><b>&nbsp;&nbsp;&nbsp;&nbsp;It's Not Warming, It's Dying</b> </div>
+				<br />						<br />
+					
+				<p>Amerikaanse (affiche-) ontwerper Milton Glaser, (bekend van het logo I love New York uit 1977) is met zijn muziekaffiches een belangrijke vertegenwoordiger van de popcultuur uit de jaren zestig en zeventig. Gekenmerkt door het getekende beeld en de grote affiniteit met de popcultuur heeft Milton Glaser grote invloed op de ontwikkeling van het grafisch ontwerpen. </p>
+				
+				<p>Naast populaire affiche’s er is nog meer uit zijn creatieve brein gekomen. Bijvoorbeeld zijn laatste - en uiteraard wat mij betreft belangrijkste - creatie: een logo voor klimaatverandering. Ontwikkeld voor zijn zelf geïnitieerde campagne <i>It’s Not Warming, It’s Dying</i>. Glaser wil met deze campagne een groter gevoel van urgentie rondom klimaatverandering creëren en wil afstappen van de term ‘Global Warming’ omdat we die al genoeg hebben gehoord. </p>
+				
+				<p>Een logo dus. Erg relevant lijkt me, want er is er geen. Tegelijkertijd zet ik hier meteen mijn vraagtekens bij, want logo’s associeer ik vrijwel automatisch met commercie en geld. De term ‘symbool’ is hier vermoedelijk beter op zijn plek. De uitwerking van het logo oogt simpel, maar kenmerkt een duidelijke boodschap. De groene bol die de aarde representeert, vervaagt steeds meer tot een zwarte, levenloze bol. Een symbolische verdwijning van leven. </p>
+				
+				<p>De ‘It’s Not Warming, It’s Dying’-campagne ging van start tijdens de Climate March in New York City (september 2014) en had groot bereik want het logo was te zien op grote billboards in de stad. Ook liep er een team met de mars mee in ‘It’s Not Warming, It’s Dying’-shirts. De campagne website werd dezelfde dag gelanceerd. Op de website kan men buttons en/of een t-shirt kopen. Op de website is geen verdere informatie te vinden. Het heeft enkel verkoop als doel.</p>
+				
+				<p>Dat Milton Glaser een campagne als deze opzet is fantastisch. Mensen zoals hij, die invloedrijk zijn en aanzien hebben, krijgen per definitie meer (media) aandacht. Ondanks dat de media niet altijd enthousiast waren over zijn campagne, is het toch buitengewoon belangrijk dat mensen als hij actie ondernemen. Wat mij betreft heeft Milton Glaser een belangrijk en sterk logo ontworpen, maar met de verkoop van plastic buttons slaat hij de plank wel een beetje mis. En het is flauw, maar het moet gezegd worden: De slogan van de campagne klopt niet. De aarde warmt wél op, maar overleeft dit wel. Het is voornamelijk de mensheid die met uitsterven bedreigd wordt.</p>
+
+
+				</div> <!-- tekstvak -->
+
+
+				</div> <!-- kolom links -->
+
+				<div class='col-sm-6 rechts'>
+
+						<img src='images/itsnotwarming0.jpg' class='img-responsive' />
+
+
+				</div> <!-- kolom rechts -->
+				
+			</div> <!-- einde row -->
+
+
+			<div class='row'>
+
+				<div class='col-sm-6'>
+				
+
+				<div class='tekstvak save our children'>
+					<a id='save-our-children'></a>
+				<div class='kop kop1'> <b>&nbsp;&nbsp;&nbsp;&nbsp;Save Our Children</b> </div>
+										<br />
+						<br />
+				<p>Over bevlogen idealisten, die misstanden aan de kaak stellen door middel van kunst gesproken. In een scriptie die begint met de vraag waar onze wereldverbeteraars uithangen, kan ik niet anders dan afsluiten met Tinkebell. Er zijn een aantal kunstenaars in Nederland (waaronder Koert van Mensvoort van Next Nature Netwerk) die sociale thema’s op de politieke agenda proberen te krijgen, maar niemand weet de media zo goed te imponeren als Tinkebell. Tinkebell gaat tot het uiterste in haar werk. Ze heeft maar één doel en dat is de wereld redden. Al het werk dat ze de afgelopen vijf jaar heeft gemaakt, valt onder haar project <i>Save the World</i>. Twee recente projecten <i>Save Our Children</i> en <i>Radioactive Flowers</i> gaan over milieu/klimaat problematiek, en hebben net als veel ander werk van haar (in de media) veel teweeggebracht.</p>
+				
+				<p>In <i>Radioactive Flowers</i> wilde Tinkebell een alarmbel laten rinkelen bij opiniemakers. Ze stuurde bloemetjes rond die ze eerder plukte in het radioactief besmette gebied rond Fukushima om te wijzen op de risico's van kernenergie. Dit was een kort project en grafisch ontwerp speelde bijna geen rol. Voor <i>Save Our Children</i> geldde het tegenovergestelde. <i>Save Our Children</i> is een uitvoerige documentaire waarin Tinkebell met verschillende experts spreekt om te achterhalen welke gevolgen het dreigende fosfaat tekort heeft. De experts (wetenschappers, artsen en politici) vertellen over de enorme voedseltekorten waar de wereld in de toekomst mee te maken krijgt. De film schept uiteindelijk een ernstig doemscenario van een toekomstige wereld waarin - zelfs als iedereen alleen nog maar plantaardig zou gaan eten - hooguit 3 á 4 miljard mensen eten hebben. En ondanks een aantal theoretisch mogelijke oplossingen voor het probleem, schept het gebrek aan politieke urgentie weinig hoop. Met het zicht op een toekomst zonder voedsel besluit Tinkebell zich te laten steriliseren. Ze vindt dat mensen die de grootte van dit probleem inzien, verantwoordelijkheid moeten nemen. </p>
+				
+				<p>Alle acties die Tinkebell ondernomen heeft zijn uitgebreid gefilmd, gefotografeerd en gedeeld op sociale media. Tinkebell: <i> Een kunstwerk is pas geslaagd als er beelden van over de wereld gaan. </i> Zelfs tijdens de operatie is er gefilmd. En ook als ze huilend wakker wordt uit de narcose. Visueel is de documentaire niet perse van hoge kwaliteit. Vooral het ontwerp gedeelde is niet hoogstaand. Er is een duidelijk contrast te zien tussen al het vorige geanalyseerde werk in deze scriptie en deze documentaire. Maar opmerkelijk is, dat dit de inhoud zeker niet minder indrukwekkend maakt. Ik weet niet of er bewust voor gekozen is, maar ik denk dat het ‘niet zo strak gemonteerde’ er toe leidt dat de impact heel groot is. Echter, het is vooral haar besluit om het zó persoonlijk te maken wat behoorlijk aangrijpend is. Waar Barnbrook smijt met shockerende feiten, gaat Tinkebell nog een stapje verder. Zelf ben ik zeer geïntrigeerd door haar, maar ik vermoed dat met z’on heftig en tegelijkertijd onbaatzuchtig besluit, weinig mensen zich kunnen identificeren. Dat geeft meteen de moeilijkheid van een actie als deze aan, want het gevaar dreigt dat mensen afhaken bij deze extreme manier van engagement. Aan de andere kant zou de inhoud en de titel: ‘Save our Children’ ervoor moeten zorgen dat mensen wel sympathiseren met haar statement. Mensen zijn niet perse in staat om op lange termijn te denken - ook in de politiek zien we dat terug - maar iedereen wil toch het beste voor zijn nageslacht? Hoe dan ook, de toon is wederom gezet door Tinkebell. Hoe melodramatisch dan ook - sensatie scoort.  Dat wordt keihard bevestigd door de stormvloed van media-aandacht die er na de lancering van de documentaire op haar af kwam. </p>
+
+				<p>In <i>Save Our Children</i> is van positieve stimulatie voor alternatieven geen sprake. De focus op een soort van algemene ellende is er wel, maar de ‘oplossing’ is een radicale consequentie. Daarmee onderscheidt Tinkebell zich op alle denkbare manieren van anderen. Haar wegen zijn ondoorgrondelijk, maar zeer heldhaftig - en ik ken weinig mensen die het met me eens zijn - maar ik vind dat wel fantastisch eigenlijk.</p>
+
+			</div>
+
+				<div class='tekstvak conclusie'>
+					<a id='conclusie'></a>
+				<div class='kop kop1'> <b>&nbsp;&nbsp;&nbsp;&nbsp;Conclusie</b></div> 
+				<br />						<br />
+				<p>Om de urgentie van ons globale klimaat probleem te visualiseren wordt er door ontwerpers en kunstenaars vaak gebruik gemaakt van de ‘shockeringsstrategie’. In een tijd waarin mensen overspoeld worden met beelden, is het een hele kunst om op te vallen en moet je soms shockeren om aandacht te krijgen. Een niet té voorzichtige aanpak, een luide en duidelijke boodschap, op een vluchtig niveau werkt het. </p>
+
+				<p>Op het gebied van grafisch ontwerp worden er briljante projecten opgezet om aandacht te genereren: een boek vol schokkende feiten over de ecologische toestand van onze aarde, esthetisch geïllustreerde posters over geruïneerd regenwoud en een kookboek met ideeën voor griezelige kweekvlees gerechten. En heel soms is er een enkeling die iets krankzinnigs doet, waar de media vervolgens zeer opgewonden van raakt. Alles wordt uit de kast gehaald om dit probleem aan de kaak te stellen.</p>
+
+				<p>Deze projecten met sterk kritische statements zijn fascinerend en vaak effectieve discussiestarters. Meestal zijn ze confronterend en soms gruwelijk. De hulp van (klimaat)deskundigen wordt meer dan eens ingezet om de boodschap meer kracht bij te zetten en de impact te vergroten. Een externe factor zoals bereik in de media, is moeilijk te beïnvloeden. Een visuele vertaling van wetenschappelijke data is waardevol, de media richt zich echter liever op die enkeling die de wereld wil redden en zich (n.a.v. deze data) laat steriliseren. Voor het bereiken van grote groepen mensen is die sensatiebeluste media iets om over na te denken. </p>
+
+				<p>Er mag aangenomen worden dat deze ‘wereldverbeterende’ projecten een universeel doel hebben: bewustwording creëren en gedragsverandering stimuleren. Je zou kunnen stellen dat een aanklacht, onderbouwd met juiste informatie, een volwassen manier van invloed uitoefenen is. Echter, een essentieel deel van ons brein is gebouwd om verandering in ons gedrag te weerstaan en de kans van slagen wordt groter als er iets tegenover die verandering staat. Dus het aandragen van een oplossing (een alternatief) zou een effectievere strategie zijn. Een goed voorbeeld hiervan is het project <i>Meat The Future</i>, waar humor en een positief toekomst scenario worden ingezet om mensen aan het denken te zetten. <i>Meat The Future</i> wijkt af van de negatieve tendens van dreigende uitingen die sommige toeschouwers op den duur ongevoelig maken. Goede alternatieven zijn er in overvloed. Grafisch ontwerpers en kunstenaars moeten enthousiasmeren en inspireren door deze alternatieven op een originele en stimulerende wijze te steunen. Vaker en meer. Op dit gebied zijn er nog heel wat stappen te maken. </p>
+
+				<p>Aan de slag dus.</p>
+
+			</div>
+
+				<div class='tekstvak abstract'>
+					<a id='abstract'></a>
+				<div class='kop kop1'> <b>&nbsp;&nbsp;&nbsp;&nbsp;Abstract</b> </div>
+				<br />						<br />
+				<p>Diseases, plagues, drought, floods, hurricanes, heavy damage to ecosystems and agriculture under pressure; the consequences of global warming do not go unnoticed today. They will worsen over time and potentially become catastrophic.</p>
+				<p>Our energy-production, which mainly relies on the burning of fossil fuels, is responsible for this to a significant extent. Ever since the industrial revolution we have been burning vast – and increasing - amounts of natural gas, oil and coal. Everyday, tons of CO2 are released into the atmosphere because of this. Apart from the influence of coal power plants, factories, businesses and the millions of cars that roam around our network of six-lane highways, our tendency to kill and eat animals is one of the major causes as well. We cut down our rainforests – the same forests that clean our air – to clear space for cattle to graze or to grow crops to feed those animals. In the process of growing soy and keeping cattle CO2, methane and nitrous oxide are released. All of these are man-caused greenhouse gases that enter the earths atmosphere, hold the warmth of the sun and lead to global warming.</p>
+
+				<p>Worldwide emissions need to be cut down by at least 50% by 2050 in order to limit the rise of the earths temperature to 2 percent points. According to the International Panel on Climate Change, this is the maximum increase we can tolerate in order to prevent catastrophic events. In 34 years, it will be 2050. This is a lot closer than we realise. However, since mankind is the leading cause of global warming, we should also be able to slow it down. That is why it is important that knowledge around the subject and its consequences is improved and spread. People need to hear that we, as society, can turn the tide. It is crucial as well that people are informed about solutions to the problem: sustainable, green alternatives for fossil fuels and different living- and eating habits.</p>
+
+				<p>Here lies a major challenge for graphic designers, artists and other visual communication experts. Graphic designers can play a particularly important role because they are able to reveal complex information in a clear form that is understandable to a broad audience.</p>
+
+				<p>In order to find out what forms of visual communication appeal to a broad audience I have analysed existing works around the subject of global warming. This helped to find an answer to the question: <b> In what manner is graphic design used to expose the devastating effects of global warming? </b></p>
+
+				<p>To stress the importance of the issue one popular method is to shock the audience. Brilliant books are published full of shocking facts around the ecological condition of our earth, grisly cultured meet dishes and images of ruined parts of nature. These statements are important but also confronting and sometimes gruesome. Moreover, our brains are programmed to resist change. I believe that changing human behaviour is possible only when there there is a stimulus. A good alternative. There are a lot of possibilities to explore in this respect. Apart from presenting shocking facts, graphic designers and artists should come up with and support alternatives. We need to get to work.
+				</p>
+
+				<p>Even after the climate talks in Paris that led to an agreement we still can't sit and wait for a solution to appear or hope that all will be fine while we continue our daily lives. Without major effort, temperatures will be likely to have increased by four percent points by the end of this century. Possibly even more. The results will be catastrophic and this is not what I want for this world. I'd rather die of natural causes.</p>
+
+			</div> <!-- tekstvak -->
+
+
+
+				
+
+
+
+
+			</div> <!-- kolom links -->
+
+			<div class='col-sm-6 rechts'>
+
+			</div> <!-- kolom rechts -->
+			
+		</div> <!-- einde row -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 
 				<br>
